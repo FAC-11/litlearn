@@ -12,16 +12,13 @@ I’d like to show you the application first. *(show them home page)* I’m goin
 The first task I’d like you to do is to open the LitLearn app and complete a short question, as if you were trying out whether the app is something you would want to use. Whenever you're ready please begin.
 
 ### Task 2
-Coolz. The next task is to answer another question and get an idea of whether your answer was a good one.
+The next task is to move on to the next question and get a hint before answering.
 
 ### Task 3
-Wicked. The next task is to answer yet another question, get some feedback as to how to improve your answer, and then to improve the answer.
+Compare your answers to someone else's and then improve your original answer. 
 
 ### Task 4
-Hell yeah! The next task is to answer a long question, as if you were practising exam questions.
-
-### Task 5
-Bangin'. The final task is to get feedback on your final answer and find out how long you have been using the app today.
+The next task is to answer a long question and review your progress. 
 
 ## Wrap up 
 May I ask you a few additional questions about yourself?
