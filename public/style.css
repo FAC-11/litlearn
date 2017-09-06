@@ -1,0 +1,22 @@
+/* for whole page to prevent white space at sides */
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+/* header. Simply says 'litlearn' */
+.litlearn__header{
+  font-family: 'Lobster Two';
+  font-size: 7em;
+  text-align: center;
+  color: white;
+}
+
+.litlearn__header--container{
+  background: -webkit-linear-gradient(left, #12FFF7, #B3FFAB);
+  padding: 3rem 0 4rem 0;
+}
