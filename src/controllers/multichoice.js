@@ -20,6 +20,7 @@ exports.get = (req, res, next) => {
   showData()
     .then((queryResult, text) => {
       res.render('multichoice', {
+//activePage for potential future functionality
         activePage: {
           multichoice: true
         },
