@@ -1,0 +1,48 @@
+{
+  "name": "litlearn",
+  "version": "1.0.0",
+  "description": "an unseen text exam revision tool",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "tape ./tests/test.js | tap-spec",
+    "coverage": "istanbul cover tape -- -R spec ./tests/test.js",
+    "start:watch": "nodemon ./src/index.js",
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FAC-11/litlearn.git"
+  },
+  "keywords": [
+    "revision",
+    "english",
+    "literature"
+  ],
+  "author": "Jen, Rachael and Tom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FAC-11/litlearn/issues"
+  },
+  "homepage": "https://github.com/FAC-11/litlearn#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "env2": "^2.2.0",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "pg": "^7.3.0",
+    "serve-favicon": "^2.4.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.6.1",
+    "istanbul": "^0.4.5",
+    "nodemon": "^1.12.0",
+    "shot": "^3.4.2",
+    "supertest": "^3.0.0",
+    "tap-diff": "^0.1.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.8.0"
+  }
+}
