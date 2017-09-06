@@ -1,6 +1,6 @@
 BEGIN;
 
-DROP TABLE IF EXISTS users, questions CASCADE;
+DROP TABLE IF EXISTS users, questions, extracts CASCADE;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -19,13 +19,13 @@ CREATE TABLE questions (
   trophy INTEGER
 );
 
-INSERT INTO questions (content, hint, small_extract_id, trophy) VALUES ('At what point <br> does Lear go crazy?','Or was he <br> always <br> a bit crazy?',1,1),('At what point <br> does Macbeth go crazy?','Maybe it had something to do with killing his mate?',2,1);
+INSERT INTO questions (questioncontent, hint, small_extract_id, trophy) VALUES ('At what point <br> does Lear go crazy?','Or was he <br> always <br> a bit crazy?',1,1),('At what point <br> does Macbeth go crazy?','Maybe it had something to do with killing his mate?',2,1);
 
 CREATE TABLE extracts (
   id SERIAL PRIMARY KEY,
   extractcontent TEXT NOT NULL
 );
 
-INSERT INTO extracts (content) VALUES ('Stuff stuff blah'), ('Blah Blah Stuff');
+INSERT INTO extracts (extractcontent) VALUES ('Stuff stuff blah'), ('Blah Blah Stuff');
 
 COMMIT;
