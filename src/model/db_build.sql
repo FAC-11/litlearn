@@ -14,10 +14,12 @@ INSERT INTO users (username, hashedPassword) VALUES
 CREATE TABLE questions (
   id SERIAL PRIMARY KEY,
   content TEXT NOT NULL,
-  hint TEXT NOT NULL
+  hint TEXT NOT NULL,
+  question_set VARCHAR(50) NOT NULL,
+  trophy INTEGER
 );
 
-INSERT INTO questions (content, hint) VALUES ('At what point <br> does Lear go crazy?','Or was he <br> always <br> a bit crazy?'),('At what point <br> does Macbeth go crazy?','Maybe it had something to do with killing his mate?');
+INSERT INTO questions (content, hint) VALUES ('At what point <br> does Lear go crazy?','Or was he <br> always <br> a bit crazy?','Shakespeare 1',1),('At what point <br> does Macbeth go crazy?','Maybe it had something to do with killing his mate?','Shakespeare 2',1);
 
 
 COMMIT;
