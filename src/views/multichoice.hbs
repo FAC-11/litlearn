@@ -1,0 +1,28 @@
+{{>header}}
+{{>extract}}
+
+<form id='multichoice-question' action='./explanation' method='POST'>
+  {{#each data.options}}
+    <input type='radio'
+     value='{{@index}}' id='option{{@index}}'
+      name='{{this}}'
+    >
+    <label for='option{{@index}}'> {{this}} </label>
+
+  {{/each}}
+
+  {{>navbar}}
+
+  <!-- stick some stuff on the navbar -->
+  <img id='lightbulb' src='public/lightbulb.png' class= 'navbar_hint-btn'>
+  <input type='submit' value="submit" style="background:url('public/goforward.png');" class= 'navbar_forward-btn'>
+
+</form>
+
+<!-- questioncontent, hint, extractcontent, options[] -->
+
+<script src='../modal.js'> </script>
+<script>
+  document.getElementById.lightbulb.addEventListener ('click',
+    openHint ({{#data.hint}}));
+</script>
