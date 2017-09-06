@@ -13,7 +13,7 @@ INSERT INTO users (username, hashedPassword) VALUES
 
 CREATE TABLE questions (
   id SERIAL PRIMARY KEY,
-  content TEXT NOT NULL,
+  questioncontent TEXT NOT NULL,
   hint TEXT NOT NULL,
   small_extract_id INTEGER,
   trophy INTEGER
@@ -23,7 +23,7 @@ INSERT INTO questions (content, hint, small_extract_id, trophy) VALUES ('At what
 
 CREATE TABLE extracts (
   id SERIAL PRIMARY KEY,
-  content TEXT NOT NULL
+  extractcontent TEXT NOT NULL
 );
 
 INSERT INTO extracts (content) VALUES ('Stuff stuff blah'), ('Blah Blah Stuff');

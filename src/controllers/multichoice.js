@@ -3,7 +3,7 @@ const dbConnection = require('./../model/db_connection');
 exports.get = (req, res, next) => {
 
   // may need updating after testing!
-  const sqlQuery = `SELECT questions.content, questions.hint, extracts.content FROM questions INNER JOIN extracts ON questions.small_extract_id = extracts.id WHERE questions.id=${req.params.number}`;
+  const sqlQuery = `SELECT questions.questioncontent, questions.hint, extracts.extractcontent FROM questions INNER JOIN extracts ON questions.small_extract_id = extracts.id WHERE questions.id=${req.params.number}`;
 
   const showData = () => {
     return new Promise((resolve, reject) => {
