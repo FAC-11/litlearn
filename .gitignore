@@ -58,5 +58,5 @@ typings/
 .env
 
 config.env
-
+package-lock.json
 .DS_Store
