@@ -1,7 +1,7 @@
 .lit-green {
     background-color: #63FFD1;
 }
-
+/*buttons are in form so subject to that styling - do this last*/
 .navbar_hint-btn{
       height: 80px;
   }
@@ -10,7 +10,7 @@
 .navbar_forward-btn{
       height: 80px;
   }
-
+/*test*/
 .red-border {
     border: 1px #d00 solid;
 }
@@ -44,7 +44,7 @@ input[type="radio"]  {    /*IE6 can take a walk*/
     opacity: 1;
     color: #12fff7;    /*color does nothing :(*/
   }
-
+/*not doing much - maybe position- could its parent be a flexcontainer*/
   .radio-text {
     position: absolute;
     margin: 3%;
@@ -52,7 +52,7 @@ input[type="radio"]  {    /*IE6 can take a walk*/
     /*height: 18vw;*/
     vertical-align: middle;
   }
-
+/*defines the height of the item with the button*/
   .radio-unclicked{
     position: absolute;
     width: 18vw;
@@ -74,7 +74,7 @@ input[type="radio"]  {    /*IE6 can take a walk*/
     content: '';
     opacity: 0;
   }
-
+/*experimental - see if this works - it's the flexcontainer*/
 .question-mc_question {
   display: flex;
   flex-direction: column;
