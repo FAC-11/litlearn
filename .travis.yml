@@ -3,6 +3,7 @@ node_js:
   - 6.11.3
 before_install:
   - pip install --user codecov
+  - npm install
 after_success:
   - codecov --file coverage/lcov.info --disable search
 postgresql: &postgresql
