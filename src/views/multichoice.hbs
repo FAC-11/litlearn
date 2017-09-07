@@ -1,22 +1,29 @@
 {{>header}}
 {{>extract}}
 
-<form id='multichoice-question' action='../explanation' method='POST'>
-  {{#each data.options}}
-    <input type='radio'
-     value='{{@index}}' id='option{{@index}}'
-      name='{{this}}'
-    >
-    <label for='option{{@index}}'> {{this}} </label>
+{{!-- {{commented expressions}}
+{{>extract data.extractcontent {extract-size: 'top'}}}
+--}}
 
+<form id='question-mc' action='../explanation' method='POST' class= 'red-border'>
+  <span class='question-mc_question, red-border'>
+    {{#each data.options}}
+      <div class='radio-container-div'>
+        <input type='radio' class='square-radio'
+          value='{{@index}}' id='option{{@index}}' name='answer'>
+        <label class='radio-label' for='option{{@index}}'>
+          <span class='radio-unclicked'> </span>
+          <span class='radio-text'> {{this}}</span>       <!-- (is our answer text) -->
+         </label>
+      </div>
   {{/each}}
+  </span>
 
   {{>navbar}}
 
   <!-- stick some stuff on the navbar -->
   <img id='lightbulb' src='../assets/lightbulb.ico' class= 'navbar_hint-btn'
-    data-hint-html = '{{data.hint}}'
-    >
+    data-hint-html = '{{data.hint}}' >
   <input type='submit' value="submit" style="background:url('../assets/goforward.png');" class= 'navbar_forward-btn'>
 
 </form>
