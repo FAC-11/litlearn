@@ -6,12 +6,26 @@ html,body
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
 }
-
+/* question pages*/
+.question-area{
+  background-color: #F5F5F5
+}
+.question-text{
+  padding: 2%;
+  margin: auto;
+  text-align: center;
+}
+/*is this still needed?*/
 .lit-green {
     background-color: #63FFD1;
 }
 /*buttons are in form so subject to that styling - do this last*/
+.navbar{
+  border-top: 1px black solid;
+  background-color: white;
+}
 .navbar_hint-btn{
       height: 80px;
   }
@@ -22,7 +36,7 @@ html,body
   }
 /*test*/
 .red-border {
-    border: 1px #d00 solid;
+    /*border: 1px #d00 solid;*/
 }
 
 
@@ -36,31 +50,34 @@ input[type="radio"]  {    /*IE6 can take a walk*/
   }*/
 
 .radio-label {
-    left: 3vw;
+    margin: 4px auto;
     width: 90vw;
     height: 18vw;
     line-height: 18vw;
     /*border-radius: 12;*/
-    border: 1px #3a3a3a solid;
-    /*display: block;*/
+    display: block;
     line-height: 22px;
     color: black;
     /*font-size: 40pt;*/
     background: white;
     position: relative;
+    -webkit-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.25);
+    box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.25);
   }
 
   input:checked+label:before {  /*only checkable inputs are radios for Q, right?*/
     opacity: 1;
-    color: #12fff7;    /*color does nothing :(*/
   }
 /*not doing much - maybe position- could its parent be a flexcontainer*/
   .radio-text {
     position: absolute;
-    margin: 3%;
+    display: inline;
+    top:50%;
     left: 18vw;
-    /*height: 18vw;*/
-    vertical-align: middle;
+    margin-top: -0.6rem;
+    margin-left: 3%;
+    height: 1.2rem;
   }
 /*defines the height of the item with the button*/
   .radio-unclicked{
@@ -68,9 +85,6 @@ input[type="radio"]  {    /*IE6 can take a walk*/
     width: 18vw;
     height: 18vw;
     background: #01fff7;
-    content: '';
-    opacity: .15;   /*partial opacity because you see through it to 'background' colour*/
-    /*should use z-index instead!*/
   }
 
   label:before {
@@ -83,19 +97,13 @@ input[type="radio"]  {    /*IE6 can take a walk*/
     background: #fa0;
     content: '';
     opacity: 0;
+    z-index: 1;
   }
 /*experimental - see if this works - it's the flexcontainer*/
 .question-mc_question {
-  display: flex;
-  flex-direction: column;
-}
-
-.radio-container-div {
-    /*width: 90vw;*/
-    /*left: 5vw;*/
-    /* ^^ do nothing :( */
-    display: flex;
-    justify-content: flex-start;
+  display:block;
+  padding: 3%;
+  padding-bottom: 2rem;
 }
 
 
@@ -129,7 +137,6 @@ input[type="radio"]  {    /*IE6 can take a walk*/
 
 .tag-line{
   position: fixed;
-  font-family: 'Source Sans Pro', sans-serif;
   color: white;
   font-size: 2em;
   padding: 0 0.5em;
