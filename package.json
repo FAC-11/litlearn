@@ -4,7 +4,8 @@
   "description": "an unseen text exam revision tool",
   "main": "index.js",
   "directories": {
-    "test": "tests"
+    "test": "tests",
+    "start:watch": "nodemon ./src/index.js"
   },
   "scripts": {
     "test": "tape ./tests/test.js | tap-spec",
