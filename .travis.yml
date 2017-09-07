@@ -5,5 +5,8 @@ before_install:
   - pip install --user codecov
 after_success:
   - codecov --file coverage/lcov.info --disable search
+postgresql: &postgresql
+adapter: postgresql
+database: travis_ci_test
 before_script:
     - psql -c 'create database travis_ci_test;' -U postgres
