@@ -1,5 +1,9 @@
 language: node_js
 node_js:
   - 6.11.3
+before_install:
+  - pip install --user codecov
+after_success:
+  - codecov --file coverage/lcov.info --disable search
 before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
+    - psql -c 'create database travis_ci_test;' -U postgres
