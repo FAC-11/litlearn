@@ -67,15 +67,30 @@ html,body
   padding: 1em;
 }
 
-+/* header. Simply says 'litlearn' */
- +.litlearn__header{
- +  font-family: 'Lobster Two';
- +  font-size: 7em;
- +  text-align: center;
- +  color: white;
- +}
- +
- +.litlearn__header--container{
- +  background: -webkit-linear-gradient(left, #12FFF7, #B3FFAB);
- +  padding: 3rem 0 4rem 0;
- +}
+/* header. Simply says 'litlearn' */
+.litlearn__header{
+  font-family: 'Lobster Two';
+  font-size: 7em;
+  text-align: center;
+  color: white;
+ }
+
+ .litlearn__header--container{
+  background: -webkit-linear-gradient(left, #12FFF7, #B3FFAB);
+  background: -o-linear-gradient(left, #12FFF7, #B3FFAB);
+  background: linear-gradient(to right, #12FFF7, #B3FFAB);
+  padding: 3rem 0 4rem 0;
+}
+
+/* Small extract CSS */
+.extract-container{
+  background-color: #ffffff;
+  height: 25%;
+  width: 100%;
+}
+.extract-text{
+  color: #000000;
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 80%;
+  margin: auto;
+}
