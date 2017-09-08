@@ -20,7 +20,18 @@ CREATE TABLE questions (
   trophy INTEGER
 );
 
-INSERT INTO questions (questioncontent, hint, small_extract_id, trophy) VALUES ('At what point <br> does Lear go crazy?', '["Monday","Tuesday","Wednesday","Thursday"]', 'Or was he <br> always <br> a bit crazy?',1,1),('At what point <br> does Macbeth go crazy?', '["After chatting with his lady", "When he starts chatting to ghosts","When he has a war with some trees","When he even considered messing with that other thane who is clearly some kind of a badass"]', 'Maybe it had something to do with killing his mate?',2,1);
+INSERT INTO questions (questioncontent, hint, options, small_extract_id, trophy)
+  VALUES ('At what point <br> does Lear go crazy?',
+              '["Monday","Tuesday","Wednesday","Thursday"]',
+               'Or was he <br> always <br> a bit crazy?',
+               1,1),
+          ('At what point <br> does Macbeth go crazy?',
+              '["After chatting with his lady",
+                  "When he starts chatting to ghosts",
+                  "When he has a war with some trees",
+                  "When he even considered messing with that other thane who is clearly some kind of a badass"]',
+               'Maybe it had something to do with killing his mate?',
+               2,1);
 
 CREATE TABLE extracts (
   id SERIAL PRIMARY KEY,
