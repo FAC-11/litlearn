@@ -24,7 +24,7 @@ exports.get = (req, res, next) => {
         activePage: {
           multichoice: true
         },
-        data: queryResult.rows[0]
+        data: Object.assign(queryResult.rows[0], {options: ['answer 1', 'answer 2', 'answer 3', 'answer 4']})
       });
     })
     .catch((queryResult, text) => {

@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - 6.11.3
+before_install:
+  - pip install --user codecov
+  - npm install
+after_success:
+  - codecov --file coverage/lcov.info --disable search
+postgresql: &postgresql
+adapter: postgresql
+database: travis_ci_test
+before_script:
+    - psql -c 'create database travis_ci_test;' -U postgres
+script:
+ - npm run coverage
