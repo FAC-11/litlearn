@@ -1,0 +1,341 @@
+@import url("normalize.css");
+/********************************/
+/* styling relevant to whole site */
+/********************************/
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/********************************/
+/* question pages*/
+/********************************/
+
+.question-area{
+  background-color: #F5F5F5
+}
+.question-text{
+  padding: 2%;
+  margin: auto;
+  text-align: center;
+}
+/*used in modal*/
+.lit-green {
+    background-color: #63FFD1;
+}
+/*buttons are in form so subject to that styling - do this last*/
+.navbar{
+  border-top: 1px black solid;
+  background-color: white;
+}
+.navbar_hint-btn{
+      height: 80px;
+  }
+
+
+.navbar_forward-btn{
+      height: 80px;
+  }
+
+
+input[type="radio"]  {
+    display: none;
+  }
+
+.radio-label {
+    margin: 4px auto;
+    width: 85vw;
+    max-width: 650px;
+    height: 18vw;
+    max-height:130px;
+    line-height: 18vw;
+    display: block;
+    line-height: 22px;
+    color: black;
+    font-size: 1.5em;
+    background: white;
+    position: relative;
+    -webkit-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.25);
+    box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.25);
+  }
+
+  input:checked+label:before {
+    opacity: 1;
+  }
+
+  .radio-text {
+    position: absolute;
+    display: inline;
+    top:50%;
+    left: 18vw;
+    margin-top: -0.6rem;
+    margin-left: 3%;
+    height: 1.2rem;
+  }
+
+  .radio-unclicked{
+    position: absolute;
+    width: 18vw;
+    max-width:130px;
+    height: 18vw;
+    max-height:130px;
+    background: #01fff7;
+  }
+
+  label:before {
+    position: absolute;
+    width: 18vw;
+    max-width:130px;
+    height: 18vw;
+    max-height:130px;
+    background: #fa0;
+    content: '';
+    opacity: 0;
+    z-index: 1;
+  }
+
+.question-mc_question {
+  display:block;
+  padding: 3%;
+  padding-bottom: 2rem;
+}
+
+
+a{
+  text-decoration: none;
+    color: black;
+}
+
+
+/********************************/
+/* Landing Page CSS */
+/********************************/
+
+.litlearn__title{
+  font-family: 'Lobster Two';
+  font-size: 5.5em;
+  text-align: center;
+  color: white;
+  position: relative;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.landing__container{
+  background: url('images/studyingboy.jpg');
+  width:auto;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.landing-cover-color{
+  background: -webkit-linear-gradient(left, rgba(18,255,247,0.5), rgba(179, 255, 171, 0.5));
+  height: 100vh;
+  width: 100vw;
+}
+
+.tag-line{
+  position: fixed;
+  color: white;
+  font-size: 2em;
+  padding: 0 0.5em;
+  bottom: 0px;
+  text-align:
+}
+
+.landing-button-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.landing-button{
+  display:flex;
+  justify-content: center;
+  background-color: white;
+  min-width: 60vw;
+  width: auto;
+  min-height: 10vh;
+  height: auto;
+  font-size: 1.5em;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 10px;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+/********************************/
+/* header. Simply says 'litlearn' */
+/********************************/
+
+ .litlearn__header{
+   font-family: 'Lobster Two';
+   font-size: 4em;
+  text-align: center;
+   color: white;
+ }
+
+ .litlearn__header--container{
+   background: -webkit-linear-gradient(left, #12FFF7, #B3FFAB);
+   padding: 1.2rem 0 1.5rem 0;
+ }
+
+ /********************************/
+ /* extract partial*/
+ /********************************/
+.extract-container{
+  display: block;
+}
+.extract-text{
+  width: 90%;
+  max-width: 850px;
+  margin: auto;
+  font-size: 1.2em;
+  display: block;
+}
+
+/********************************/
+/* congratulations page styling */
+/********************************/
+
+.congrats-container{
+  background-color: #E5E5E5;
+  height: 100vh;
+}
+
+/********************************/
+/* top half of congrats page*/
+/********************************/
+
+.great-work-container{
+background: -webkit-linear-gradient(left, #FF8008, #FFC837);
+color: white;
+width: 95vw;
+height: 70vh;
+border-radius: 20px;
+margin: 0 auto;
+box-shadow: 2px 2px 2px #888888;
+}
+
+.great-work-container h2{
+  font-family: 'Lobster Two';
+  text-align: center;
+  font-size: 5em;
+  padding-top: 0.25em;
+  margin: 0 auto;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+.great-work-container h3{
+  font-family: 'Lobster Two';
+  text-align: center;
+  font-size: 2em;
+}
+
+.great-work-container p{
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  font-size: 1em;
+}
+
+.image{
+  background-image: url(./images/medal.jpg);
+  height: 150px;
+  width:150px;
+  margin: 0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.top-of-congrats{
+  padding-bottom: 1em;
+  box-shadow: 2px 2px 2px #888888;
+  background-color: white;
+}
+
+/********************************/
+/* bottom half of congrats page*/
+/********************************/
+
+.bottom-of-congrats h3{
+font-family: 'Source Sans Pro', sans-serif;
+text-align: center;
+margin: 0.5em 0;
+}
+
+.congrats-button{
+  font-size: 1.2em;
+  box-sizing: border-box;
+  display: flex;
+  align-content: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: white;
+  /*font-size: 1.2em;*/
+  height: 5vh;
+  width: 95vw;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.colour-square {
+  background-color: #FF8008;
+  height: 5vh;
+  width: 10vw;
+  margin-right: 1em;
+}
+
+.question{
+  display: flex;
+  align-items: center;
+}
+
+/********************************/
+/* Large Extract Page*/
+/********************************/
+
+.large-extract-container{
+box-sizing: border-box;
+padding-top: 10vw;
+background: -webkit-linear-gradient(left, #12FFF7, #B3FFAB);
+margin: 0 auto;
+height: 100vh;
+width: 100vw;
+}
+
+.large-extract{
+  font-family: 'Source Sans Pro', sans-serif;
+  background: white;
+  width: 80vw;
+  height: 75vh;
+  border-radius: 20px;
+  margin: 0 auto;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.large-extract h2 {
+  padding-top: 10vw;
+  text-align: center;
+  font-family: 'Lobster Two';
+  font-size: 3em;
+  margin: 0 auto;
+}
+
+.large-extract p {
+  text-align: center;
+  margin: 10vw;
+  font-size: 1em;
+}
