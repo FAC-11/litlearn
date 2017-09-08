@@ -26,3 +26,7 @@ oneTaskTimer.message += 'RESTARTING TIMER. START----';
     return 0;
   }
 }
+
+function todaysTotal () {
+  return (sessionStorage.getItem("totalTimer"));    \\ || 0 once debugging done
+}
