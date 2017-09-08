@@ -1,3 +1,4 @@
+@import url("normalize.css");
 /********************************/
 /* styling relevant to whole site */
 /********************************/
@@ -11,7 +12,11 @@ html,body
     overflow-x: hidden;
     font-family: 'Source Sans Pro', sans-serif;
 }
+
+/********************************/
 /* question pages*/
+/********************************/
+
 .question-area{
   background-color: #F5F5F5
 }
@@ -20,7 +25,7 @@ html,body
   margin: auto;
   text-align: center;
 }
-/*is this still needed?*/
+/*used in modal*/
 .lit-green {
     background-color: #63FFD1;
 }
@@ -37,31 +42,23 @@ html,body
 .navbar_forward-btn{
       height: 80px;
   }
-/*test*/
-.red-border {
-    /*border: 1px #d00 solid;*/
-}
 
 
-input[type="radio"]  {    /*IE6 can take a walk*/
+input[type="radio"]  {
     display: none;
   }
-/*
-.radio-div {
-    width: 50vw;
-    height: 5vh;
-  }*/
 
 .radio-label {
     margin: 4px auto;
-    width: 90vw;
+    width: 85vw;
+    max-width: 650px;
     height: 18vw;
+    max-height:130px;
     line-height: 18vw;
-    /*border-radius: 12;*/
     display: block;
     line-height: 22px;
     color: black;
-    /*font-size: 40pt;*/
+    font-size: 1.5em;
     background: white;
     position: relative;
     -webkit-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.25);
@@ -69,10 +66,10 @@ input[type="radio"]  {    /*IE6 can take a walk*/
     box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.25);
   }
 
-  input:checked+label:before {  /*only checkable inputs are radios for Q, right?*/
+  input:checked+label:before {
     opacity: 1;
   }
-/*not doing much - maybe position- could its parent be a flexcontainer*/
+
   .radio-text {
     position: absolute;
     display: inline;
@@ -82,27 +79,28 @@ input[type="radio"]  {    /*IE6 can take a walk*/
     margin-left: 3%;
     height: 1.2rem;
   }
-/*defines the height of the item with the button*/
+
   .radio-unclicked{
     position: absolute;
     width: 18vw;
+    max-width:130px;
     height: 18vw;
+    max-height:130px;
     background: #01fff7;
   }
 
   label:before {
     position: absolute;
-    /*top: 2px;
-    left:2px;*/
     width: 18vw;
+    max-width:130px;
     height: 18vw;
-    /*background: #f2c94c;*/
+    max-height:130px;
     background: #fa0;
     content: '';
     opacity: 0;
     z-index: 1;
   }
-/*experimental - see if this works - it's the flexcontainer*/
+
 .question-mc_question {
   display:block;
   padding: 3%;
@@ -182,15 +180,29 @@ a{
 
  .litlearn__header{
    font-family: 'Lobster Two';
-   font-size: 7em;
+   font-size: 4em;
   text-align: center;
    color: white;
  }
 
  .litlearn__header--container{
    background: -webkit-linear-gradient(left, #12FFF7, #B3FFAB);
-   padding: 3rem 0 4rem 0;
+   padding: 1.2rem 0 1.5rem 0;
  }
+
+ /********************************/
+ /* extract partial*/
+ /********************************/
+.extract-container{
+  display: block;
+}
+.extract-text{
+  width: 90%;
+  max-width: 850px;
+  margin: auto;
+  font-size: 1.2em;
+  display: block;
+}
 
 /********************************/
 /* congratulations page styling */
