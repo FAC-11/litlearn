@@ -19,7 +19,6 @@ console.log ('>',oneTaskTimer);
   if (dontStartIt || (oneTaskTimer.started && !oneTaskTimer.counted))
     return (toNearestFraction ((Date.now() - oneTaskTimer.started)/60000, 60));
   else {
-oneTaskTimer.message += 'RESTARTING TIMER. START----';
     oneTaskTimer.started = Date.now();
     oneTaskTimer.counted = undefined;
     window.sessionStorage.setItem("oneTaskTimer", JSON.stringify(oneTaskTimer));
@@ -28,5 +27,5 @@ oneTaskTimer.message += 'RESTARTING TIMER. START----';
 }
 
 function todaysTotal () {
-  return (sessionStorage.getItem("totalTimer"));    \\ || 0 once debugging done
+  return (sessionStorage.getItem("totalTimer"));   // || 0 once debugging done
 }
