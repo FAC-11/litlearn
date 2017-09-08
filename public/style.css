@@ -302,3 +302,40 @@ margin: 0.5em 0;
   display: flex;
   align-items: center;
 }
+
+/********************************/
+/* Large Extract Page*/
+/********************************/
+
+.large-extract-container{
+box-sizing: border-box;
+padding-top: 10vw;
+background: -webkit-linear-gradient(left, #12FFF7, #B3FFAB);
+margin: 0 auto;
+height: 100vh;
+width: 100vw;
+}
+
+.large-extract{
+  font-family: 'Source Sans Pro', sans-serif;
+  background: white;
+  width: 80vw;
+  height: 75vh;
+  border-radius: 20px;
+  margin: 0 auto;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.large-extract h2 {
+  padding-top: 10vw;
+  text-align: center;
+  font-family: 'Lobster Two';
+  font-size: 3em;
+  margin: 0 auto;
+}
+
+.large-extract p {
+  text-align: center;
+  margin: 10vw;
+  font-size: 1em;
+}
