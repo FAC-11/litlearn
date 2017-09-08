@@ -1,6 +1,9 @@
 function showSelection () {
   var selection = JSON.parse (sessionStorage.getItem("selection"));
-  document.body.innerHTML = '<h1>Bwahahaha! '+selection.selection+'</h1>';
+  var output = document.createElement ('div');
+  output.innerHTML = '<h1>You selected: '+selection.selection+'</h1>'+
+  '<h2>You\'ve done '+startTimer(false)+' mins this session</h2>';
+  document.body.appendChild (output);
 }
 
 showSelection();

@@ -6,5 +6,6 @@ function storeQuestionSelection(event) {
   window.location = './mcintro.html';
 }
 
+stopTimer();
 var submit = document.getElementById ('store-selection');
 submit.addEventListener ('click',storeQuestionSelection)
