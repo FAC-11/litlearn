@@ -20,9 +20,7 @@ exports.get = (req, res, next) => {
   }
   showData()
     .then((queryResult, text) => {
-console.log (queryResult.rows[0]);
-queryResult.rows[0].options = JSON.parse(queryResult.rows[0].options );
-console.log (queryResult.rows[0]);
+      queryResult.rows[0].options = JSON.parse(queryResult.rows[0].options );
       res.render('multichoice', {
 //activePage for potential future functionality
         activePage: {
