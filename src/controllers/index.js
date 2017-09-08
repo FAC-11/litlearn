@@ -7,9 +7,11 @@ router.use(bodyParser.urlencoded({extended: true}));
 
 const home = require('./home');
 const multichoice = require('./multichoice');
+const congratulations = require('./congratulations');
 
 
 router.get('/', home.get);
 // included /:number to allow for random questions
 router.get('/multichoice/:number', multichoice.get);
+router.get('/congratulations', congratulations.get);
 module.exports = router;

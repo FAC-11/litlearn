@@ -1,4 +1,7 @@
-/* for whole page to prevent white space at sides */
+/********************************/
+/* styling relevant to whole site */
+/********************************/
+
 html,body
 {
     width: 100%;
@@ -6,10 +9,117 @@ html,body
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+/* question pages*/
+.question-area{
+  background-color: #F5F5F5
+}
+.question-text{
+  padding: 2%;
+  margin: auto;
+  text-align: center;
+}
+/*is this still needed?*/
+.lit-green {
+    background-color: #63FFD1;
+}
+/*buttons are in form so subject to that styling - do this last*/
+.navbar{
+  border-top: 1px black solid;
+  background-color: white;
+}
+.navbar_hint-btn{
+      height: 80px;
+  }
+
+
+.navbar_forward-btn{
+      height: 80px;
+  }
+/*test*/
+.red-border {
+    /*border: 1px #d00 solid;*/
 }
 
 
+input[type="radio"]  {    /*IE6 can take a walk*/
+    display: none;
+  }
+/*
+.radio-div {
+    width: 50vw;
+    height: 5vh;
+  }*/
+
+.radio-label {
+    margin: 4px auto;
+    width: 90vw;
+    height: 18vw;
+    line-height: 18vw;
+    /*border-radius: 12;*/
+    display: block;
+    line-height: 22px;
+    color: black;
+    /*font-size: 40pt;*/
+    background: white;
+    position: relative;
+    -webkit-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.25);
+    box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.25);
+  }
+
+  input:checked+label:before {  /*only checkable inputs are radios for Q, right?*/
+    opacity: 1;
+  }
+/*not doing much - maybe position- could its parent be a flexcontainer*/
+  .radio-text {
+    position: absolute;
+    display: inline;
+    top:50%;
+    left: 18vw;
+    margin-top: -0.6rem;
+    margin-left: 3%;
+    height: 1.2rem;
+  }
+/*defines the height of the item with the button*/
+  .radio-unclicked{
+    position: absolute;
+    width: 18vw;
+    height: 18vw;
+    background: #01fff7;
+  }
+
+  label:before {
+    position: absolute;
+    /*top: 2px;
+    left:2px;*/
+    width: 18vw;
+    height: 18vw;
+    /*background: #f2c94c;*/
+    background: #fa0;
+    content: '';
+    opacity: 0;
+    z-index: 1;
+  }
+/*experimental - see if this works - it's the flexcontainer*/
+.question-mc_question {
+  display:block;
+  padding: 3%;
+  padding-bottom: 2rem;
+}
+
+
+a{
+  text-decoration: none;
+    color: black;
+}
+
+
+/********************************/
 /* Landing Page CSS */
+/********************************/
+
 .litlearn__title{
   font-family: 'Lobster Two';
   font-size: 5.5em;
@@ -38,7 +148,6 @@ html,body
 
 .tag-line{
   position: fixed;
-  font-family: 'Source Sans Pro', sans-serif;
   color: white;
   font-size: 2em;
   padding: 0 0.5em;
@@ -67,30 +176,117 @@ html,body
   padding: 1em;
 }
 
+/********************************/
 /* header. Simply says 'litlearn' */
-.litlearn__header{
-  font-family: 'Lobster Two';
-  font-size: 7em;
+/********************************/
+
+ .litlearn__header{
+   font-family: 'Lobster Two';
+   font-size: 7em;
   text-align: center;
-  color: white;
+   color: white;
  }
 
  .litlearn__header--container{
-  background: -webkit-linear-gradient(left, #12FFF7, #B3FFAB);
-  background: -o-linear-gradient(left, #12FFF7, #B3FFAB);
-  background: linear-gradient(to right, #12FFF7, #B3FFAB);
-  padding: 3rem 0 4rem 0;
+   background: -webkit-linear-gradient(left, #12FFF7, #B3FFAB);
+   padding: 3rem 0 4rem 0;
+ }
+
+/********************************/
+/* congratulations page styling */
+/********************************/
+
+.congrats-container{
+  background-color: #E5E5E5;
+  height: 100vh;
 }
 
-/* Small extract CSS */
-.extract-container{
-  background-color: #ffffff;
-  height: 25%;
-  width: 100%;
+/********************************/
+/* top half of congrats page*/
+/********************************/
+
+.great-work-container{
+background: -webkit-linear-gradient(left, #FF8008, #FFC837);
+color: white;
+width: 95vw;
+height: 70vh;
+border-radius: 20px;
+margin: 0 auto;
+box-shadow: 2px 2px 2px #888888;
 }
-.extract-text{
-  color: #000000;
+
+.great-work-container h2{
+  font-family: 'Lobster Two';
+  text-align: center;
+  font-size: 5em;
+  padding-top: 0.25em;
+  margin: 0 auto;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+.great-work-container h3{
+  font-family: 'Lobster Two';
+  text-align: center;
+  font-size: 2em;
+}
+
+.great-work-container p{
   font-family: 'Source Sans Pro', sans-serif;
-  width: 80%;
-  margin: auto;
+  text-align: center;
+  font-size: 1em;
+}
+
+.image{
+  background-image: url(./images/medal.jpg);
+  height: 150px;
+  width:150px;
+  margin: 0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.top-of-congrats{
+  padding-bottom: 1em;
+  box-shadow: 2px 2px 2px #888888;
+  background-color: white;
+}
+
+/********************************/
+/* bottom half of congrats page*/
+/********************************/
+
+.bottom-of-congrats h3{
+font-family: 'Source Sans Pro', sans-serif;
+text-align: center;
+margin: 0.5em 0;
+}
+
+.congrats-button{
+  font-size: 1.2em;
+  box-sizing: border-box;
+  display: flex;
+  align-content: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: white;
+  /*font-size: 1.2em;*/
+  height: 5vh;
+  width: 95vw;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.colour-square {
+  background-color: #FF8008;
+  height: 5vh;
+  width: 10vw;
+  margin-right: 1em;
+}
+
+.question{
+  display: flex;
+  align-items: center;
 }
