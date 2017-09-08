@@ -1,0 +1,38 @@
+<header>
+{{>header}}
+</header>
+<section>
+{{>extract}}
+{{!-- {{commented expressions}}
+{{>extract data.extractcontent {extract-size: 'top'}}}
+--}}
+</section>
+<section class='question-area'>
+<h2 class='question-text'>{{data.questioncontent}}</h2>
+<form id='question-mc' action='../explanation' method='POST'>
+  <div class='question-mc_question red-border'>
+    {{#each data.options}}
+      <div class='radio-container-div'>
+        <input type='radio'
+          value='{{@index}}' id='option {{@index}}' name='answer'>
+        <label class='radio-label' for='option {{@index}}'>
+          <span class='radio-unclicked'> </span>
+          <span class='radio-text'> {{this}}</span>       <!-- (is our answer text) -->
+         </label>
+      </div>
+  {{/each}}
+</div>
+<div class='navbar'>
+  {{>navbar}}
+
+  <!-- stick some stuff on the navbar -->
+  <img id='lightbulb' src='../assets/lightbulb.ico' class= 'navbar_hint-btn'
+    data-hint-html = '{{data.hint}}' >
+  <input type='submit' value="submit" style="background:url('../assets/goforward.png');" class= 'navbar_forward-btn'>
+
+</form>
+
+<!-- questioncontent, hint, extractcontent, options[] -->
+</div>
+</section>
+<script src='../modal.js'> </script>
