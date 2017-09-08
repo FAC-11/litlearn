@@ -7,6 +7,7 @@ router.use(bodyParser.urlencoded({extended: true}));
 
 const home = require('./home');
 const multichoice = require('./multichoice');
+const explain = require('./explain');
 const congratulations = require('./congratulations');
 const extract = require('./extract');
 
@@ -14,6 +15,7 @@ const extract = require('./extract');
 router.get('/', home.get);
 // included /:number to allow for random questions
 router.get('/multichoice/:number', multichoice.get);
+router.get('/explain/:number', explain.get);
 router.get('/congratulations', congratulations.get);
 router.get('/extract/:number', extract.get);
 module.exports = router;

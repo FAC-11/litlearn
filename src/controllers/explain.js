@@ -3,7 +3,7 @@ const dbConnection = require('./../model/db_connection');
 exports.get = (req, res, next) => {
 
   // may need updating after testing!
-  const sqlQuery = `SELECT questions.questioncontent, questions.hint, questions.id, extracts.extractcontent FROM questions INNER JOIN extracts ON questions.small_extract_id = extracts.id WHERE questions.id=${req.params.number}`;
+  const sqlQuery = `SELECT questions.questioncontent, questions.hint, extracts.extractcontent FROM questions INNER JOIN extracts ON questions.small_extract_id = extracts.id WHERE questions.id=${req.params.number}`;
 
   const showData = () => {
     return new Promise((resolve, reject) => {
@@ -19,10 +19,10 @@ exports.get = (req, res, next) => {
   }
   showData()
     .then((queryResult, text) => {
-      res.render('multichoice', {
+      res.render('explain', {
 //activePage for potential future functionality
         activePage: {
-          multichoice: true
+          explain: true
         },
         data: Object.assign(queryResult.rows[0], {options: ['answer 1', 'answer 2', 'answer 3', 'answer 4']})
       });

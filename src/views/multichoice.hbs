@@ -7,7 +7,7 @@
 </section>
 <section class='question-area'>
 <h2 class='question-text'>{{data.questioncontent}}</h2>
-<form id='question-mc' action='../explanation' method='POST'>
+<form id='question-mc' action='../explain/{{data.id}}' method='GET'>
   <div class='question-mc_question red-border'>
     {{#each data.options}}
       <div class='radio-container-div'>
@@ -30,7 +30,8 @@
 
 </form>
 
-<!-- questioncontent, hint, extractcontent, options[] -->
+<!-- id, questioncontent, hint, extractcontent, options[] -->
 </div>
 </section>
 <script src='../modal.js'> </script>
+<script src='../select-question.js'> </script>
