@@ -1,4 +1,7 @@
-/* for whole page to prevent white space at sides */
+/********************************/
+/* styling relevant to whole site */
+/********************************/
+
 html,body
 {
     width: 100%;
@@ -107,8 +110,16 @@ input[type="radio"]  {    /*IE6 can take a walk*/
 }
 
 
+a{
+  text-decoration: none;
+    color: black;
+}
 
+
+/********************************/
 /* Landing Page CSS */
+/********************************/
+
 .litlearn__title{
   font-family: 'Lobster Two';
   font-size: 5.5em;
@@ -165,15 +176,117 @@ input[type="radio"]  {    /*IE6 can take a walk*/
   padding: 1em;
 }
 
+/********************************/
 /* header. Simply says 'litlearn' */
+/********************************/
+
  .litlearn__header{
    font-family: 'Lobster Two';
    font-size: 7em;
-   text-align: center;
+  text-align: center;
    color: white;
  }
 
  .litlearn__header--container{
    background: -webkit-linear-gradient(left, #12FFF7, #B3FFAB);
    padding: 3rem 0 4rem 0;
+ }
+
+/********************************/
+/* congratulations page styling */
+/********************************/
+
+.congrats-container{
+  background-color: #E5E5E5;
+  height: 100vh;
+}
+
+/********************************/
+/* top half of congrats page*/
+/********************************/
+
+.great-work-container{
+background: -webkit-linear-gradient(left, #FF8008, #FFC837);
+color: white;
+width: 95vw;
+height: 70vh;
+border-radius: 20px;
+margin: 0 auto;
+box-shadow: 2px 2px 2px #888888;
+}
+
+.great-work-container h2{
+  font-family: 'Lobster Two';
+  text-align: center;
+  font-size: 5em;
+  padding-top: 0.25em;
+  margin: 0 auto;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+.great-work-container h3{
+  font-family: 'Lobster Two';
+  text-align: center;
+  font-size: 2em;
+}
+
+.great-work-container p{
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  font-size: 1em;
+}
+
+.image{
+  background-image: url(./images/medal.jpg);
+  height: 150px;
+  width:150px;
+  margin: 0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.top-of-congrats{
+  padding-bottom: 1em;
+  box-shadow: 2px 2px 2px #888888;
+  background-color: white;
+}
+
+/********************************/
+/* bottom half of congrats page*/
+/********************************/
+
+.bottom-of-congrats h3{
+font-family: 'Source Sans Pro', sans-serif;
+text-align: center;
+margin: 0.5em 0;
+}
+
+.congrats-button{
+  font-size: 1.2em;
+  box-sizing: border-box;
+  display: flex;
+  align-content: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: white;
+  /*font-size: 1.2em;*/
+  height: 5vh;
+  width: 95vw;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.colour-square {
+  background-color: #FF8008;
+  height: 5vh;
+  width: 10vw;
+  margin-right: 1em;
+}
+
+.question{
+  display: flex;
+  align-items: center;
 }
