@@ -14,6 +14,7 @@ INSERT INTO users (username, hashedPassword) VALUES
 CREATE TABLE questions (
   id SERIAL PRIMARY KEY,
   questioncontent TEXT NOT NULL,
+  options TEXT,
   hint TEXT NOT NULL,
   small_extract_id INTEGER,
   trophy INTEGER
