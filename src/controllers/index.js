@@ -9,6 +9,8 @@ const home = require('./home');
 const multichoice = require('./multichoice');
 const congratulations = require('./congratulations');
 const summary = require('./summary');
+const extract = require('./extract');
+
 
 
 router.get('/', home.get);
@@ -16,4 +18,5 @@ router.get('/', home.get);
 router.get('/multichoice/:number', multichoice.get);
 router.get('/summary', summary.get);
 router.get('/congratulations', congratulations.get);
+router.get('/extract/:number', extract.get);
 module.exports = router;
