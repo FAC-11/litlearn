@@ -1,6 +1,6 @@
 BEGIN;
 
-DROP TABLE IF EXISTS users, questions, extracts CASCADE;
+DROP TABLE IF EXISTS users, questions, extracts, tags, many2many CASCADE;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -20,7 +20,7 @@ CREATE TABLE questions (
   trophy INTEGER
 );
 
-INSERT INTO questions (questioncontent, hint, options, small_extract_id, trophy)
+INSERT INTO questions (questioncontent, options, hint, small_extract_id, trophy)
   VALUES ('At what point <br> does Lear go crazy?',
               '["Monday","Tuesday","Wednesday","Thursday"]',
                'Or was he <br> always <br> a bit crazy?',

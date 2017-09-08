@@ -57,6 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+src/model/config.env
 config.env
 package-lock.json
 .DS_Store
