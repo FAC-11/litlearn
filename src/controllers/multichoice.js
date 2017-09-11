@@ -13,6 +13,7 @@ exports.get = (req, res, next) => {
           if (err) {
             reject(err, 'This is an error in the sqlQuery function');
           } else {
+    console.log('Query resolved');
             resolve(res, 'response to the sqlQuery');
           }
         });
@@ -22,7 +23,7 @@ exports.get = (req, res, next) => {
     .then((queryResult, text) => {
       queryResult.rows[0].options = JSON.parse(queryResult.rows[0].options );
       res.render('multichoice', {
-//activePage for potential future functionality
+        //activePage for potential future functionality
         activePage: {
           multichoice: true
         },
