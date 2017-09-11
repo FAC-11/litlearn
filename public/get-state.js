@@ -2,7 +2,7 @@
 
 function getState () {
   console.log (document.keys.length);
-  const retrieved = {
+  const retrieved = {};
     questionObjectString : window.sessionStorage.getItem ('question-data',questionObjectString),
     answerObjectString : window.sessionStorage.getItem ('answers',answerObjectString),
     oneTaskTimer : window.sessionStorage.getItem ('oneTaskTimer',oneTaskTimer),
@@ -11,16 +11,28 @@ function getState () {
   return ('<h1>'+JSON.stringify(retrieved)+'<h1>');
 }
 
-function loadXDATAToElement (toLoad) {
-  const elements=
-    ['question-data',
+function loadDataToElements (toLoad) {
+  const elements={};
+  ['question-data',
     'answers',
     'oneTaskTimer',
     'totalTimer']
-      .map (el => {
-        return {el, actualElementinDocument}
-      });
+      .forEach ((el) => {elements[el] = document.GetElementById(el)}); ///not quite right!
+
 }
+
+// elements within 'question-data':
+//
+// intro : 'question-summary'
+// multichoice: question-content
+// multichoice: options
+// multichoice: hint
+//
+//
+//
+//
+
+
 
 document.getElementById ('question-object-storage-container')
   .setAttribute('data-question-object', getState ());
