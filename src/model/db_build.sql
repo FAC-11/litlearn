@@ -14,17 +14,18 @@ INSERT INTO users (username, hashedPassword) VALUES
 CREATE TABLE questions (
   id SERIAL PRIMARY KEY,
   questioncontent TEXT NOT NULL,
+  summary TEXT NOT NULL,
   options TEXT,
   hint TEXT NOT NULL,
   small_extract_id INTEGER,
   trophy INTEGER
 );
 
-INSERT INTO questions (questioncontent, options, hint, small_extract_id, trophy)
+INSERT INTO questions (summary, questioncontent, options, hint, small_extract_id, trophy)
   VALUES
-  ('This extract is the opening of a story by Edgar Allen Poe. Which word do you feel best describes the atmosphere of this scene?', '["miserable", "happy", "creepy", "tense"]', 'How does the writer describe the weather? What mood does that create?', 1, 1),
-  ('This extract is written by someone reviewing a play. What seems to be their opinion of it?', '["They love it", "They mostly like it", "They mostly dislike it", "They hate it"]', 'How much of the dialogue does the reviewer say is good and how much do they say is bad writing?', 2, 1),
-  ('What is the relationship between Benvolio and Tybalt in this scene?', '["They are good friends", "Tybalt wants to fight", "Benvolio wants to fight", "They both want to fight"]', 'Both men give an instruction to the other. What does each one say?', 3, 2);
+  ('Edgar Allen Poe story opening','This extract is the opening of a story by Edgar Allen Poe. Which word do you feel best describes the atmosphere of this scene?', '["miserable", "happy", "creepy", "tense"]', 'How does the writer describe the weather? What mood does that create?', 1, 1),
+  ('19th Century theatre review','This extract is written by someone reviewing a play. What seems to be their opinion of it?', '["They love it", "They mostly like it", "They mostly dislike it", "They hate it"]', 'How much of the dialogue does the reviewer say is good and how much do they say is bad writing?', 2, 1),
+  ('Benvolio and Tybalt', 'What is the relationship between Benvolio and Tybalt in this scene?', '["They are good friends", "Tybalt wants to fight", "Benvolio wants to fight", "They both want to fight"]', 'Both men give an instruction to the other. What does each one say?', 3, 2);
 
 CREATE TABLE extracts (
   id SERIAL PRIMARY KEY,
