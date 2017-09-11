@@ -1,6 +1,21 @@
 <header>
 {{>header}}
 </header>
+
+ <!-- proto-decision:
+handlebars can't access anything from frontend, apart from what page you're on,
+so - try: append everything to classes with f/e JS and only use handlebars
+to block classes / elements.
+Essentially means you can't pass data to handlebars partials.
+Tuesday morning make an issue to rewrite partials to not take data. -->
+
+
+<div id='question-object-storage-container', style = 'display: none;'
+  data-question-object = ''>
+</div>
+<script src='../get-state.js'> </script>
+{{getstate data.extractcontent}}
+
 <section class='extract-container'>
 {{>extract extract=data.extractcontent}}
 
