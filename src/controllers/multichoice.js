@@ -13,7 +13,6 @@ exports.get = (req, res, next) => {
           if (err) {
             reject(err, 'This is an error in the sqlQuery function');
           } else {
-    console.log('Query resolved');
             resolve(res, 'response to the sqlQuery');
           }
         });

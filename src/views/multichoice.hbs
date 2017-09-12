@@ -2,22 +2,13 @@
 {{>header}}
 </header>
 
- <!-- proto-decision:
-handlebars can't access anything from frontend, apart from what page you're on,
-so - try: append everything to classes with f/e JS and only use handlebars
-to block classes / elements.
-Essentially means you can't pass data to handlebars partials.
-Tuesday morning make an issue to rewrite partials to not take data. -->
-
 <div id='timer'> test timer (failed if you see this!) </div>
 
 <div id='question-object-storage-container', style = 'display: none;'
   data-question-object = ''>
 </div>
-{{getstate data.extractcontent}}
 
 <section class='extract-container'>
-<div display='none' data-extract-object = ''> </div>
 {{>extract extract=data.extractcontent}}
 
 </section>
