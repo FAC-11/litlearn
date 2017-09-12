@@ -1,6 +1,6 @@
 ///front end - called as <script src=...>
 
-
+// ids shoulkd contain everything /potentially/ relevant, as unused items will be filtered out later.
 // {key=sessionStorage name : {html: HTML id}}
 const ids=
   {'question-content' : {'html':'question-content' },
@@ -9,7 +9,7 @@ const ids=
   // 'totalTimer' : {'html': 'totalTimer' }
   };
 
-  // elements within 'question-data':
+  // elements we'll want:
   //
   // intro : 'question-summary'
   // multichoice: question-content
@@ -35,6 +35,7 @@ console.log (el,' :-');
   return elements;
 }
 
+// retrieveState() retrieves items referred to in const ids ^ and populates HTML with them.
 // {key=sessionStorage name : {html: HTML id, element: actual HTML element withih document}}
 function retrieveState () {
   // console.log (document.keys.length);
@@ -47,13 +48,14 @@ function retrieveState () {
     console.log ('Obj.',el,' = ',elementsObj[el]);
     console.log ('Obj.',el,'.html = ',elementsObj[el].html);
     console.log ('Obj.',el,'.element = ',elementsObj[el].element);
-    ///Use of .innerHTML as calculated security risk. HTML likely to be used.
-    ///Gives malicious user only  the opportunity to run arbitrary code as our domain on
+    ///Intended with use of attribute .innerHTML as calculated security risk because HTML
+    ///likely to be used in our data.
+    ///Gives malicious user only the opportunity to run arbitrary code as our domain on
     ///own machine - no biggie...
     elementsObj[el].element.setAttribute
           ('data-'+elementsObj[el].html, window.sessionStorage.getItem (el));
   });
 }
 
-document.getElementById ('question-object-storage-container')
-  .setAttribute('data-question-object', retrieveState ());
+// go!
+retrieveState ();
