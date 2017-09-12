@@ -8,13 +8,20 @@ var edexcel = document.getElementById('EDEXCEL');
 var ocr = document.getElementById('OCR');
 var eduqas = document.getElementById('EDUQAS');
 
-var c19 = document.getElementById('19C');
-var c20 = document.getElementById('20C');
-var c21 = document.getElementById('21C');
+var c19 = document.getElementById('nineteen-c');
+var c20 = document.getElementById('twenty-c');
+var c21 = document.getElementById('twentyone-c');
+
+var fiction = document.getElementById('fiction');
+var nonfiction = document.getElementById('non-fiction');
+
+var romeo = document.getElementById('romeo');
+var macbeth = document.getElementById('macbeth');
+var frankenstein = document.getElementById('frankenstein');
 
 var buttons = document.getElementsByClassName('question-button');
 
-var tagOptions = [language, literature, aqa, edexcel, ocr, eduqas, c19, c20, c21];
+var tagOptions = [language, literature, aqa, edexcel, ocr, eduqas, c19, c20, c21, fiction, nonfiction];
 
 var hideButton = function(buttonList) {
   for(var i=0; i<buttonList.length; i++){
@@ -39,16 +46,12 @@ var filter = function() {
   filterform.addEventListener('submit', function(e) {
     e.preventDefault();
     hideButton(buttons);
-    console.log(e.target.dataset);
     var questions = JSON.parse(JSON.stringify(e.target.dataset));
-    console.log(questions);
     var chosenOptions = tagOptions.filter(function(option) {
       return option.checked
     }).map(function(option) {
       return option.value
     });
-
-    console.log(chosenOptions);
 
     chosenOptions.forEach(function(option) {
       for (quest in questions) {
@@ -57,7 +60,6 @@ var filter = function() {
         }
       }
     });
-    console.log(questions);
     showButton(questions);
 
   });
