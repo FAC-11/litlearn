@@ -338,6 +338,69 @@ margin: 0.5em 0;
   align-items: center;
 }
 
+
+
+/********************************/
+/* Summary of progress page*/
+/********************************/
+
+.summary-container{
+  background: -webkit-linear-gradient(200deg, #12FFF7, #B3FFAB);
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.summary-container h2 {
+  margin: 0 auto;
+  font-family: 'Lobster Two';
+  text-align: center;
+  font-size: 4em;
+  padding: 0.2em;
+  color: darkslategrey;
+}
+
+.summary-image{
+  background-image: url(./images/thumbs-up.jpg);
+  height: 60vw;
+  width:60vw;
+  margin: 0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 1em;
+}
+
+.summary-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+  width: 70vw;
+  margin: 0 auto;
+  height: 7vh;
+  background-color: white;
+  box-shadow: 1px 1px 1px #888888;
+  padding: 0.6em 1em;
+  margin-top: 0.75em;
+  border-radius: 10px;
+  color: #4F4F4F;
+}
+
+.summary-box .medals{
+font-family: 'Lobster Two';
+display: flex;
+font-size: 6vh;
+}
+
+.medal{
+  background: url(./images/medal.jpg);
+  width: 8vh;
+  height: 8vh;
+  background-color: #B373F0;
+  border-radius: 50%;
+    background-size: contain;
+
 /********************************/
 /* Large Extract Page*/
 /********************************/
@@ -373,4 +436,5 @@ width: 100vw;
   text-align: center;
   margin: 10vw;
   font-size: 1em;
+
 }
