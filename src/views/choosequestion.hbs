@@ -1,0 +1,74 @@
+{{>header}}
+<form class='question_filter_form'id='question_filter_form' {{#each data}} data-question-{{this.id}}='{{this.filter}}'{{/each}}>
+
+<h3 class='choose-question'> Please choose what you would like to study today: </h2>
+  <fieldset>
+  <p class='fieldset-heading'>TYPE OF EXAM</p>
+
+    <input type="radio" name='exam-type' id='language-button' class='language hidden' value='Language'>
+    <label for="language-button" class='button-label'> Language</label>
+
+<input type="radio" name='exam-type' id='literature-button' class='filter-button hidden' value='Literature'> <label for="literature-button" class='button-label'> Literature </label>
+ </fieldset>
+
+<fieldset>
+<p class='fieldset-heading'> EXAM BOARD</p>
+<input type="radio" name='exam-board' id='AQA' class='filter-button hidden' value='AQA'> <label for="AQA" class='button-label'> AQA </label>
+
+
+<input type="radio" name='exam-board' id='OCR' class='filter-button hidden' value='OCR'>
+  <label for="OCR" class='button-label'> OCR </label>
+
+<input type="radio" name='exam-board' id='EDEXCEL' class='filter-button hidden' value='EDEXCEL'>
+    <label for="EDEXCEL" class='button-label'> EDEXCEL </label>
+
+  <input type="radio" name='exam-board' id='EDUQAS' class='filter-button hidden' value='EDUQAS'>
+    <label for="EDUQAS" class='button-label'> EDUQAS </label>
+</fieldset>
+
+ <fieldset>
+<p class='fieldset-heading'>TEXT AGE</p>
+    <input type="radio" name='text-age' id='nineteen-c' class='filter-button hidden' value='nineteen-c'>
+    <label for="nineteen-c" class='button-label'> 19th Century </label>
+
+   <input type="radio" name='text-age' id='twenty-c' class='filter-button hidden' value='twenty-c'>
+    <label for="twenty-c" class='button-label'> 20th Century </label>
+
+   <input type="radio" name='text-age' id='twentyone-c' class='filter-button hidden' value='twentyone-c'>
+    <label for="twentyone-c" class='button-label'> 21st Century </label>
+ </fieldset>
+
+ <fieldset>
+   <p class='fieldset-heading'>TEXT TYPE</p>
+    <input type="radio" name='text-type' id='fiction' class='filter-button hidden' value='fiction'>
+    <label for="fiction" class='button-label'> Fiction </label>
+
+   <input type="radio" name='text-type' id='non-fiction' class='filter-button hidden' value='non-fiction'>
+    <label for="non-fiction" class='button-label'> Non-Fiction </label>
+ </fieldset>
+
+<fieldset>
+<p class='fieldset-heading'>TEXT</p>
+ <input type="radio" name='text' id='romeo' class='filter-button hidden' value='romeo'>
+ <label for="romeo" class='button-label'> Romeo & Juliet </label>
+
+<input type="radio" name='text' id='macbeth' class='filter-button hidden' value='macbeth'>
+ <label for="macbeth" class='button-label'> Macbeth </label>
+
+ <input type="radio" name='text' id='frankenstein' class='filter-button hidden' value='frankenstein'>
+  <label for="frankenstein" class='button-label'> Frankenstein </label>
+</fieldset>
+
+<fieldset>
+<input type="submit" value='Submit' class='button-label'>
+</fieldset>
+</form>
+
+{{#each data}}
+<a href='/multichoice/{{this.id}}'>
+  <button class='question-button'>
+    <h3>{{this.summary}}</h3>
+    <p>{{this.filter}}</p>
+  </button></a>
+{{/each}}
+<script src='../filter.js'></script>
