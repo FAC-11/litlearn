@@ -14,6 +14,21 @@ html,body
 }
 
 /********************************/
+/* choose a question*/
+/********************************/
+
+.question-button {
+  border: 1px #43b293 solid;
+  background-color: white;
+  border-radius: 5px;
+  color: #43b293;
+  display: block;
+  text-align: left;
+  width: 80%;
+  max-width: 600px;
+}
+
+/********************************/
 /* question pages*/
 /********************************/
 
