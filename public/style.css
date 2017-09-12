@@ -28,6 +28,10 @@ html,body
   max-width: 600px;
 }
 
+.hidden {
+  display: none;
+}
+
 /********************************/
 /* question pages*/
 /********************************/
