@@ -29,3 +29,5 @@ console.log ('>',oneTaskTimer);
 function todaysTotal () {
   return (sessionStorage.getItem("totalTimer"));   // || 0 once debugging done
 }
+
+timer=startTimer();
