@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const dbConnection = require('./../model/db_connection');
 
 exports.get = (req, res, next) => {
@@ -11,4 +12,8 @@ exports.get = (req, res, next) => {
     },
     data: fakeData
   });
+=======
+exports.get = (req, res) => {
+  res.render('multichoice', {activePage:{multichoice:true}});
+>>>>>>> master
 }
