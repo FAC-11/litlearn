@@ -1,12 +1,19 @@
 <header>
 {{>header}}
 </header>
+
+<div id='timer'> test timer (failed if you see this!) </div>
+
+<div id='question-object-storage-container', style = 'display: none;'
+  data-question-object = ''>
+</div>
+
 <section class='extract-container'>
 {{>extract extract=data.extractcontent}}
 
 </section>
 <section class='question-area'>
-<h2 class='question-text'>{{data.questioncontent}}</h2>
+<h2 class='question-text' id='question-content'>{{data.questioncontent}}</h2>
 <form id='question-mc' action='../explanation' method='POST'>
   <div class='question-mc_question red-border'>
     {{#each data.options}}
@@ -33,4 +40,5 @@
 <!-- questioncontent, hint, extractcontent, options[] -->
 </div>
 </section>
+<script src='../get-state.js'> </script>
 <script src='../modal.js'> </script>

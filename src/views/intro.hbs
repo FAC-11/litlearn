@@ -1,9 +1,26 @@
+
+<div id='question-object-storage-container', style = 'display: none;'
+  data-question-object = '{{data}}'>
+</div>
+
+
+
 <div class="large-extract-container">
   <div class="large-extract">
-    <h2> Title of Extract </h2>
     <p>
-      Intro Text will go here
+      Things about a question. <br>
+
+      You will see an extract. <br>
+
+      This extract is <span id='question-summary'></span>'.
     </p>
   </div>
   {{> navbar }}
+
 </div>
+
+<script src='../start-timer.js'> </script>
+<script>
+  var timer=startTimer();
+</script>
+<script src='../store-query.js'> </script>

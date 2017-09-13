@@ -22,7 +22,7 @@ exports.get = (req, res, next) => {
     .then((queryResult, text) => {
       queryResult.rows[0].options = JSON.parse(queryResult.rows[0].options );
       res.render('multichoice', {
-//activePage for potential future functionality
+        //activePage for potential future functionality
         activePage: {
           multichoice: true
         },
