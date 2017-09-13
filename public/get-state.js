@@ -18,7 +18,7 @@ var ids=
   'hint' : {'html': 'lightbulb', 'dest' : 'data-hint-content'}, //done
   'extractcontent' : {'html':'extract-content', 'dest' : 'innerHTML'}, //looks good. No extract showing, but seems to be prob with old part
   'trophy' : {'html':'trophy'},
-  'answers' : {'html': 'answers'},
+  'answer' : {'html': 'answer'},
   'oneTaskTimer' : {'html': 'timer'},
   // 'totalTimer' : {'html': 'totalTimer' }
   };
