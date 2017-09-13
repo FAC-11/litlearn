@@ -1,12 +1,5 @@
-module.exports = {
-  generic: [
+module.exports = [
     'choosequestion',
     'summary',
     'congratulations'
-  ],
-  question: [
-    'intro',
-    'multichoice',
-    'extract'
   ]
-}
