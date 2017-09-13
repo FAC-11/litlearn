@@ -2,7 +2,7 @@
   {{>header}}
 </header>
 
-<div id='timer'> test timer (failed if you see this!) </div>
+<div id='timer' style = 'display: none;'> test timer (failed if you see this!) </div>
 
 <div id='question-object-storage-container', style = 'display: none;'
   data-question-object = ''>
@@ -17,14 +17,15 @@
 <section class='question-area'>
 <h2 class='question-text' id='question-content'>{{data.questioncontent}}</h2>
 <form id='question-mc' action='../explain' method='GET'>
+  <div style= 'display : none' id='answer'> </div>
   <div class='question-mc_question red-border'>
     {{#each data.options}}
       <div class='radio-container-div'>
         <input type='radio'
-          value='{{@index}}' id='option {{@index}}' name='answer'>
-        <label class='radio-label' for='option {{@index}}'>
+          value='{{onePlus @index}}' id='option-{{onePlus @index}}' name='answer' class='clickable-option'>
+        <label class='radio-label' for='option-{{onePlus @index}}'>
           <span class='radio-unclicked'> </span>
-          <span class='radio-text'> {{this}}</span>       <!-- (is our answer text) -->
+          <span id='option-text-{{onePlus @index}}' class='radio-text'> {{this}}</span>       <!-- (is our answer text) -->
          </label>
         </div>
       {{/each}}
@@ -49,7 +50,7 @@
       </div>
 
       <div class="button">
-        <input type='submit' class='navbar_forward-btn navbar-button'>
+        <input id='submit' type='submit' class='navbar_forward-btn navbar-button' onclick='outputForm'>
       </div>
 
 
@@ -59,3 +60,4 @@
 </section>
 <script src='../modal.js'> </script>
 <script src='../get-state.js'> </script>
+<script src='../remember-answer.js'> </script>
