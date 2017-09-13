@@ -3,20 +3,16 @@
 // ids shoulkd contain everything /potentially/ relevant, as unused items will be filtered out later.
 // {key=sessionStorage name : {html: HTML id}}
 const ids=
-  {'question-content' : {'html':'question-content' },
+  {'summary' : {'html':'summary-content'},
+  'questioncontent' : {'html':'question-content' },
+  'options' : {'html':'options-str'},
+  'hint' : {'html':'hint-content'}, //done
+  'extractcontent' : {'html':'extract-content'},
+  'trophy' : {'html':'trophy'},
   'answers' : {'html': 'answers'},
   'oneTaskTimer' : {'html': 'timer'},
   // 'totalTimer' : {'html': 'totalTimer' }
   };
-
-  // elements we'll want:
-  //
-  // intro : 'question-summary'
-  // multichoice: question-content
-  // multichoice: options
-  // multichoice: hint
-  //
-  //
 
 // {key=sessionStorage name : {html: HTML id, element: actual HTML element withih document}}
 function locateCurrentElements (idsObj) {
@@ -54,6 +50,8 @@ function retrieveState () {
     ///own machine - no biggie...
     elementsObj[el].element.setAttribute
           ('data-'+elementsObj[el].html, window.sessionStorage.getItem (el));
+
+///currently endsup in eg <h2>.dataset.camelCaseAttr = 'contents'
   });
 }
 
