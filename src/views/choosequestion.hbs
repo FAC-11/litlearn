@@ -1,15 +1,4 @@
 {{>header}}
-<div id='question-button-div'>
-{{#each data}}
-
-<a href='/intro/{{this.id}}'>
-  <button class='question-choice-button hidden' id='question-button-{{this.id}}'>
-    <h3 class='question-summary-text'>{{this.summary}}</h3>
-    <p class='question-tags'>{{this.filter}}</p>
-
-  </button></a>
-{{/each}}
-</div>
 <form class='question_filter_form'id='question_filter_form' {{#each data}} data-{{this.id}}='{{this.filter}}'{{/each}}>
 
 <h3 class='choose-question'> Please choose what you would like to study today: </h2>
@@ -38,7 +27,7 @@
 </fieldset>
 
  <fieldset>
-<p class='fieldset-heading'>TEXT AGE</p>
+<p class='fieldset-heading'>LANGUAGE EXAM: TEXT AGE</p>
     <input type="radio" name='text-age' id='nineteen-c' class='filter-button hidden' value='19th C'>
     <label for="nineteen-c" class='button-label'> 19th Century </label>
 
@@ -50,7 +39,7 @@
  </fieldset>
 
  <fieldset>
-   <p class='fieldset-heading'>TEXT TYPE</p>
+   <p class='fieldset-heading'>LANGUAGE EXAM: TEXT TYPE</p>
     <input type="radio" name='text-type' id='fiction' class='filter-button hidden' value='Fiction'>
     <label for="fiction" class='button-label'> Fiction </label>
 
@@ -59,7 +48,7 @@
  </fieldset>
 
 <fieldset>
-<p class='fieldset-heading'>TEXT</p>
+<p class='fieldset-heading'>LITERATURE EXAM: TEXT</p>
  <input type="radio" name='text' id='romeo' class='filter-button hidden' value='Romeo and Juliet'>
  <label for="romeo" class='button-label'> Romeo & Juliet </label>
 
@@ -77,6 +66,18 @@
 </fieldset>
 
 </form >
+
+<div id='question-button-div'>
+{{#each data}}
+
+<a href='/intro/{{this.id}}'>
+  <button class='question-choice-button hidden' id='question-button-{{this.id}}'>
+    <h3 class='question-summary-text'>{{this.summary}}</h3>
+    <p class='question-tags'>{{this.filter}}</p>
+
+  </button></a>
+{{/each}}
+</div>
 
 <script src='../stop-timer.js'> </script>
 <script src='../filter.js'></script>
