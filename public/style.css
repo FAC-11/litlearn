@@ -186,6 +186,7 @@ color: white;
 .navbar{
   border-top: 1px black solid;
   background-color: white;
+  z-index: 1;
 }
 .navbar_hint-btn{
       height: 80px;
