@@ -256,6 +256,7 @@ input[type="radio"]  {
   display:block;
   padding: 3%;
   padding-bottom: 2rem;
+  width: 93%;
 }
 
 
@@ -264,7 +265,10 @@ a{
     color: black;
 }
 
-
+.answer_text{
+  width: 80%;
+  margin: 0 10%;
+}
 /********************************/
 /* Landing Page CSS */
 /********************************/

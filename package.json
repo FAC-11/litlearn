@@ -11,7 +11,8 @@
     "test": "tape ./tests/test.js | tap-spec",
     "coverage": "istanbul cover tape -- -R spec ./tests/test.js && codecov",
     "start:watch": "nodemon ./src/index.js",
-    "start": "node ./src/index.js"
+    "start": "node ./src/index.js",
+    "build": "node ./src/model/db_build.js"
   },
   "repository": {
     "type": "git",
