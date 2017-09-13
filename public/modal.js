@@ -43,6 +43,6 @@
 	}
 
 document.getElementById('lightbulb').addEventListener ('click', (event) => {
-    openHint (event.target.dataset.hintHtml);
+    openHint (event.target.dataset.hintContent);
     // openHint ();
 });

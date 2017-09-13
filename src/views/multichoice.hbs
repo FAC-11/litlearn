@@ -9,7 +9,9 @@
 </div>
 
 <section class='extract-container'>
-  {{>extract extract=data.extractcontent}}
+
+{{>extract extract=data.extract-content}}
+
 
 </section>
 <section class='question-area'>
@@ -41,6 +43,7 @@
         </a>
       </div>
 
+
       <div class="button">
         <img id='lightbulb' src='../assets/hint.jpg' class='navbar_hint-btn navbar-button' data-hint-html='{{data.hint}}'>
       </div>
@@ -49,10 +52,10 @@
         <input type='submit' class='navbar_forward-btn navbar-button'>
       </div>
 
+
   </form>
 
-<!-- id, questioncontent, hint, extractcontent, options[] -->
 </div>
 </section>
-<script src='../get-state.js'> </script>
 <script src='../modal.js'> </script>
+<script src='../get-state.js'> </script>
