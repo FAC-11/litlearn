@@ -16,15 +16,28 @@
   <div class='question-mc_question'>
     <textarea required name="message" rows="10" placeholder="Don't forget to write about important words in the extract!" class="answer_text"></textarea>
   </div>
-<div class='navbar'>
-  {{>navbar}}
+  <div class='navbar'>
+    <div class="button">
+      <a href="/multichoice">
+  <img id='back-btn' src='../assets/backarrow.jpg' class= 'navbar_back-btn navbar-button'>
+      </a>
+    </div>
 
-  <!-- stick some stuff on the navbar -->
-  <img id='lightbulb' src='../assets/lightbulb.ico' class= 'navbar_hint-btn'
-    data-hint-html = '{{data.hint}}' >
-  <input type='submit' value="submit" style="background:url('../assets/goforward.png');" class= 'navbar_forward-btn'>
+    <div class="button">
+      <a href="/">
+  <img id='home-btn' src='../assets/home.png' class= 'navbar_home-btn navbar-button'>
+      </a>
+    </div>
 
-</form>
+    <div class="button">
+      <img id='lightbulb' src='../assets/hint.jpg' class='navbar_hint-btn navbar-button' data-hint-html='{{data.hint}}'>
+    </div>
+
+    <div class="button">
+      <input type='submit' class='navbar_forward-btn navbar-button'>
+    </div>
+
+  </form>
 
 <!-- questioncontent, hint, extractcontent, options[] -->
 </div>
