@@ -9,7 +9,7 @@
 </div>
 
 <section class='extract-container'>
-{{>extract extract=data.extractcontent}}
+{{>extract extract=data.extract-content}}
 
 </section>
 <section class='question-area'>
@@ -32,13 +32,12 @@
 
   <!-- stick some stuff on the navbar -->
   <img id='lightbulb' src='../assets/lightbulb.ico' class= 'navbar_hint-btn'
-    data-hint-html = '{{data.hint}}' >
+    data-hint-content = '{{data.hint}}' >
   <input type='submit' value="submit" style="background:url('../assets/goforward.png');" class= 'navbar_forward-btn'>
 
 </form>
 
-<!-- id, questioncontent, hint, extractcontent, options[] -->
 </div>
 </section>
-<script src='../get-state.js'> </script>
 <script src='../modal.js'> </script>
+<script src='../get-state.js'> </script>

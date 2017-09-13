@@ -1,7 +1,11 @@
-function storeQuery (questionObjectString) {
-  console.log ('Storing stringification of length :',questionObjectString.length);
-  sessionStorage.setItem ('question-data',questionObjectString);
+function storeQuery (questionObject) {
+  console.log ('Storing stringification of length :',questionObject.length);
+  Object.keys(questionObject).forEach ((el) => {
+    sessionStorage.setItem (el,questionObject[el]);
+  });
 }
 
-var qObStr = document.getElementById ('question-object-storage-container').getAttribute('data-question-object');
-storeQuery (qObStr);
+
+console.log ('running store-query.js');
+var qOb = JSON.parse (document.getElementById ('question-object-storage-container').getAttribute('data-question-object'));
+storeQuery (qOb);
