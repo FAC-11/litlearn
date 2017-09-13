@@ -4,6 +4,7 @@ node_js:
 before_install:
   - pip install --user codecov
   - npm install
+  - npm run src/model/db_build.js
 after_success:
   - codecov --file coverage/lcov.info --disable search
 postgresql: &postgresql
