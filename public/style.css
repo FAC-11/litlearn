@@ -14,7 +14,160 @@ html,body
 }
 
 /********************************/
-/* question pages*/
+/* choose a */
+/********************************/
+
+/* Radio button styling */
+*{
+  box-sizing: border-box;
+}
+fieldset{
+  border: none;
+border-bottom: solid 0.25px lightgrey;
+margin: 0 0.5em;
+
+/*text-align: center;*/
+}
+
+.question_filter_form{
+  background-color: #F5F5F5;
+  margin: 0 auto;
+}
+.choose-question{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2em;
+  margin: 0 auto;
+  padding: 1em 2em;
+  color: darkslategrey;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+.fieldset-heading{
+font-family: 'Source Sans Pro', sans-serif;
+font-size: 0.8em;
+margin: .5em;
+color: darkslategrey;
+letter-spacing: 1.5px;
+}
+
+.button-label {
+  display: inline-block;
+  min-width: 20vw;
+  max-width: 40vw;
+  text-align: center;
+  padding: 1em 1.5em;
+  margin: 0.5em;
+  cursor: pointer;
+  color: darkslategrey;
+  letter-spacing: 1.5px;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.22);
+  transition: 0.3s;
+  user-select: none;
+}
+
+  .button-label:hover {
+    background: lightgrey;
+    color: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.32);
+  }
+
+.button-label:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+
+  input.button-label{
+    text-decoration: none;
+    border: none !important;
+    margin:1em 0.5em;
+    background-color: #1FCF7C;
+    color: white;
+  }
+
+  input.button-label:hover {
+    background: #1FCF7C;
+    color: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.32);
+  }
+
+
+
+  @media screen and (min-width: 550px){
+    fieldset{
+      margin: 0 2em;
+    }
+  }
+
+#literature-button:checked + .button-label,
+#language-button:checked + .button-label
+{
+  background: #FF545F;
+  color: white;
+  box-shadow: none;
+}
+
+#AQA:checked + .button-label,
+#OCR:checked + .button-label,
+#EDUQAS:checked + .button-label,
+#EDEXCEL:checked + .button-label
+{
+  background: #15B2AD;
+color: white;
+  box-shadow: none;
+}
+
+
+#nineteen-c:checked + .button-label,
+#twenty-c:checked + .button-label,
+#twentyone-c:checked + .button-label
+{
+  background: #AF4996;
+  color: white;
+    box-shadow: none;
+}
+
+#frankenstein:checked + .button-label,
+#romeo:checked + .button-label,
+#macbeth:checked + .button-label{
+  background:#FFDE68;
+color: white;
+  box-shadow: none;
+}
+
+#fiction:checked + .button-label,
+#non-fiction:checked + .button-label{
+  background:#587291;
+color: white;
+  box-shadow: none;
+}
+
+
+
+.hidden{
+  display: none;
+}
+
+/* choice of question */
+.question-button {
+  border: 1px #43b293 solid;
+  background-color: white;
+  border-radius: 5px;
+  color: #43b293;
+  display: block;
+  text-align: left;
+  width: 80%;
+  max-width: 600px;
+}
+
+.hidden {
+  display: none;
+}
+
+/********************************/
+/* multichoice question pages*/
 /********************************/
 
 .question-area{
@@ -38,11 +191,9 @@ html,body
       height: 80px;
   }
 
-
 .navbar_forward-btn{
       height: 80px;
   }
-
 
 input[type="radio"]  {
     display: none;
@@ -66,7 +217,7 @@ input[type="radio"]  {
     box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.25);
   }
 
-  input:checked+label:before {
+  input:checked+.radio-label:before {
     opacity: 1;
   }
 
@@ -89,7 +240,7 @@ input[type="radio"]  {
     background: #01fff7;
   }
 
-  label:before {
+  .radio-label:before {
     position: absolute;
     width: 18vw;
     max-width:130px;
@@ -149,33 +300,68 @@ a{
 }
 
 .tag-line{
-  position: fixed;
+position:fixed;
+bottom: 0;
+ width:100%;
+  height:15vh;
   color: white;
-  font-size: 2em;
+  font-size: 1.5em;
   padding: 0 0.5em;
-  bottom: 0px;
-  text-align:
+  text-align: center;
 }
 
 .landing-button-container{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+    margin-top: 5vh;
+}
+
+.a-landing-button{
+margin: 1em;
 }
 
 .landing-button{
-  display:flex;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  align-self: center;
+  flex-wrap:wrap;
+  border: none;
   background-color: white;
-  min-width: 60vw;
+  min-width: 80vw;
   width: auto;
   min-height: 10vh;
   height: auto;
   font-size: 1.5em;
   font-family: 'Source Sans Pro', sans-serif;
-  border-radius: 10px;
-  margin: 1em 0;
-  padding: 1em;
+  border-radius: 40px;
+  margin: 0.5em 0;
+  padding: 0.5em 1em;
+  color: #4F4F4F;
+  margin-top: 4vw;
+}
+
+.landing-button:hover{
+color: white;
+background-color: #00cca3;
+}
+
+@media screen and (min-width:662px){
+.landing-button{
+  min-width: 40vw;
+  width: auto;
+  }
+  .tag-line{
+  font-size: 2.5em;
+  }
+  .landing-button-container{
+  margin-top: 10vh;
+  }
+  .litlearn__title{
+  font-size: 8em;
+  padding-bottom: 0;
+  }
 }
 
 /********************************/
@@ -307,6 +493,69 @@ margin: 0.5em 0;
   align-items: center;
 }
 
+
+
+/********************************/
+/* Summary of progress page*/
+/********************************/
+
+.summary-container{
+  background: -webkit-linear-gradient(200deg, #12FFF7, #B3FFAB);
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.summary-container h2 {
+  margin: 0 auto;
+  font-family: 'Lobster Two';
+  text-align: center;
+  font-size: 4em;
+  padding: 0.2em;
+  color: darkslategrey;
+}
+
+.summary-image{
+  background-image: url(./images/thumbs-up.jpg);
+  height: 60vw;
+  width:60vw;
+  margin: 0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 1em;
+}
+
+.summary-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+  width: 70vw;
+  margin: 0 auto;
+  height: 7vh;
+  background-color: white;
+  box-shadow: 1px 1px 1px #888888;
+  padding: 0.6em 1em;
+  margin-top: 0.75em;
+  border-radius: 10px;
+  color: #4F4F4F;
+}
+
+.summary-box .medals{
+font-family: 'Lobster Two';
+display: flex;
+font-size: 6vh;
+}
+
+.medal{
+  background: url(./images/medal.jpg);
+  width: 8vh;
+  height: 8vh;
+  background-color: #B373F0;
+  border-radius: 50%;
+    background-size: contain;
+
 /********************************/
 /* Large Extract Page*/
 /********************************/
@@ -342,4 +591,5 @@ width: 100vw;
   text-align: center;
   margin: 10vw;
   font-size: 1em;
+
 }
