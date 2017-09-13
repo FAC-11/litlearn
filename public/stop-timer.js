@@ -13,20 +13,24 @@ function toNearestFraction (mins, denom) {
 // return timeSpent (mins)
 function stopTimer() {
   var oneTaskTimer = JSON.parse(sessionStorage.getItem("oneTaskTimer"));
-  var totalTimer = Number(sessionStorage.getItem("totalTimer"));
+  var totalTimer = Number(sessionStorage.getItem("totalTimer")) || 0;
 console.log ('should be: ',toNearestFraction ((Date.now() - oneTaskTimer.started)/60000, 20));
+timeSpent = 0;
   if (!oneTaskTimer.counted)
-    var timeSpent = toNearestFraction ((Date.now() - oneTaskTimer.started)/60000, 20);
+    timeSpent = toNearestFraction ((Date.now() - oneTaskTimer.started)/60000, 20);
 console.log ('will be: ',timeSpent);
   if (itsANewDay()) {
   }
 console.log ('totalTimer:',totalTimer);
   totalTimer = totalTimer || 0;
   totalTimer += timeSpent;
+  totalTimer = toNearestFraction (totalTimer,1000);
 console.log ('totalTimer ->',totalTimer);
   sessionStorage.setItem("totalTimer", totalTimer);
-  oneTaskTimer.started = undefined;
+  oneTaskTimer.started = Date.now();
   oneTaskTimer.counted = true;
   sessionStorage.setItem("oneTaskTimer", JSON.stringify(oneTaskTimer));
   return timeSpent;
 }
+
+stopTimer();

@@ -8,7 +8,7 @@ function toNearestFraction (mins, denom) {
 function startTimer(dontStartIt) {
 
   var oneTaskTimer = JSON.parse(sessionStorage.getItem("oneTaskTimer")) || {};
-  var totalTimer = sessionStorage.getItem("totalTimer");
+  var totalTimer = sessionStorage.getItem("totalTimer") || 0;
   // No use for new day check when starting / getting timer.
   // if (itsANewDay()) {
   // }
@@ -29,3 +29,5 @@ console.log ('>',oneTaskTimer);
 function todaysTotal () {
   return (sessionStorage.getItem("totalTimer"));   // || 0 once debugging done
 }
+
+timer=startTimer();
