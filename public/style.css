@@ -361,6 +361,64 @@ background-color: #00cca3;
 }
 
 /********************************/
+/* navbar */
+/********************************/
+
+
+.navbar{
+  position: fixed;
+ bottom: 0px;
+  border-top: 1px black solid;
+  background-color: white;
+  padding-top:0.5em;
+  padding-bottom: 0.5em;
+  display: flex;
+  width: 100%;
+}
+
+.button{
+  min-width: 25%;
+}
+
+.navbar_forward-btn{
+  /*height: 60px;
+  width: 80%;
+  max-width: 60px;*/
+  /*background-size: contain;*/
+  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+  color: transparent;
+  border:none;
+  background:url('../assets/forwardarrow.jpg');
+}
+
+.navbar-button{
+  background-repeat: no-repeat;
+  display: flex;
+  align-content: center;
+  margin: 0 auto;
+  height: 10vw;
+  width: 10vw;
+  max-width: 60px;
+  max-height: 60px;
+  background-size: contain;
+  text-align: center;
+  font-size: .7em;
+  letter-spacing: 3px;
+}
+
+.intro-buttons{
+  display: flex;
+  justify-content: space-around;
+  width: 50vw;
+}
+
+.extract-buttons{
+  width: 33vw;
+}
+
+
+/********************************/
 /* header. Simply says 'litlearn' */
 /********************************/
 
@@ -529,7 +587,7 @@ margin: 0.5em 0;
   font-size: 1em;
   width: 70vw;
   margin: 0 auto;
-  height: 7vh;
+  height: 8vh;
   background-color: white;
   box-shadow: 1px 1px 1px #888888;
   padding: 0.6em 1em;
@@ -546,11 +604,12 @@ font-size: 6vh;
 
 .medal{
   background: url(./images/medal.jpg);
-  width: 8vh;
-  height: 8vh;
+  width: 6vh;
+  height: 6vh;
   background-color: #B373F0;
   border-radius: 50%;
     background-size: contain;
+}
 
 /********************************/
 /* Large Extract Page*/

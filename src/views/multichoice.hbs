@@ -1,36 +1,50 @@
 <header>
-{{>header}}
+  {{>header}}
 </header>
 <section class='extract-container'>
-{{>extract extract=data.extractcontent}}
+  {{>extract extract=data.extractcontent}}
 
 </section>
 <section class='question-area'>
-<h2 class='question-text'>{{data.questioncontent}}</h2>
-<form id='question-mc' action='../explanation' method='POST'>
-  <div class='question-mc_question red-border'>
-    {{#each data.options}}
-      <div class='radio-container-div'>
-        <input type='radio'
-          value='{{@index}}' id='option {{@index}}' name='answer'>
-        <label class='radio-label' for='option {{@index}}'>
+  <h2 class='question-text'>{{data.questioncontent}}</h2>
+  <form id='question-mc' action='../explanation' method='POST'>
+    <div class='question-mc_question red-border'>
+      {{#each data.options}}
+        <div class='radio-container-div'>
+          <input type='radio' value='{{@index}}' id='option {{@index}}' name='answer'>
+          <label class='radio-label' for='option {{@index}}'>
           <span class='radio-unclicked'> </span>
           <span class='radio-text'> {{this}}</span>       <!-- (is our answer text) -->
          </label>
+        </div>
+      {{/each}}
+    </div>
+
+    <div class='navbar'>
+      <div class="button">
+        <a href="/extract">
+    <img id='back-btn' src='../assets/backarrow.jpg' class= 'navbar_back-btn navbar-button'>
+        </a>
       </div>
-  {{/each}}
-</div>
-<div class='navbar'>
-  {{>navbar}}
 
-  <!-- stick some stuff on the navbar -->
-  <img id='lightbulb' src='../assets/lightbulb.ico' class= 'navbar_hint-btn'
-    data-hint-html = '{{data.hint}}' >
-  <input type='submit' value="submit" style="background:url('../assets/goforward.png');" class= 'navbar_forward-btn'>
+      <div class="button">
+        <a href="/">
+  <img id='home-btn' src='../assets/home.png' class= 'navbar_home-btn navbar-button'>
+        </a>
+      </div>
 
-</form>
+      <div class="button">
+        <img id='lightbulb' src='../assets/hint.jpg' class='navbar_hint-btn navbar-button' data-hint-html='{{data.hint}}'>
+      </div>
 
-<!-- questioncontent, hint, extractcontent, options[] -->
-</div>
+      <div class="button">
+        <input type='submit' class='navbar_forward-btn navbar-button'>
+      </div>
+
+  </form>
+
+  <!-- questioncontent, hint, extractcontent, options[] -->
+  </div>
 </section>
-<script src='../modal.js'> </script>
+<script src='../modal.js'>
+</script>
