@@ -42,7 +42,7 @@
 		window.scrollTo(0,0);     //Test this!
 	}
 
-document.getElementById('hint').addEventListener ('click', (event) => {
+document.getElementById('lightbulb').addEventListener ('click', (event) => {
     openHint (event.target.dataset.hintContent);
     // openHint ();
 });
