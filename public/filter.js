@@ -41,7 +41,9 @@ var showButton = function(questionObject){
 //   document.getElementById('question-button-'+(key)).classList.remove('hidden');
 // }
 
+
 var filter = function() {
+
   //write event listener on the submit button to re-render the table
   filterform.addEventListener('submit', function(e) {
     e.preventDefault();

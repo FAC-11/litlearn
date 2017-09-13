@@ -1,16 +1,16 @@
 <header>
 {{>header}}
 </header>
-<section class='extract-container'>
-<!-- put the extract in here -->
 
+<section class='extract-container'>
+{{>extract extract=data.extract-content}}
 </section>
+
 <section class='question-area'>
 <h2 class='question-text'>
   <!-- put the question in here -->
 </h2>
-<h3 class='question-text'>Can you explain why you chose
-  <span id='answer'> that answer </span>?
+<h3 class='question-text'>Can you explain why you chose '{{answer}}'?
 <!-- put the selected option here -->
 </h3>
 <form id='question-mc' action='../congratulations' method='GET'>
@@ -44,5 +44,5 @@
 </div>
 </section>
 <script src='../modal.js'> </script>
-<script src='../answer-from-query.js'> </script>
 <script src='../get-state.js'> </script>
+<script src='../answer-from-query.js'> </script>

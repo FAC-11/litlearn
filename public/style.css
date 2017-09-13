@@ -145,26 +145,41 @@ color: white;
 }
 
 
-
-.hidden{
-  display: none;
+/* choice of question */
+.question-button-div{
+  text-align: center;
 }
 
-/* choice of question */
-.question-button {
-  border: 1px #43b293 solid;
+.question-choice-button {
   background-color: white;
-  border-radius: 5px;
+  text-decoration: none;
+  border: none;
   color: #43b293;
   display: block;
   text-align: left;
   width: 80%;
   max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: solid 0.25px lightgrey;
+  border-top: solid 0.25px lightgrey;
+  width: 100vw;
+}
+
+.question-summary-text{
+  color: darkslategrey;
+}
+
+.question-tags{
+  color: darkslategrey;
+  letter-spacing: 1px;
 }
 
 .hidden {
   display: none;
 }
+
+
 
 /********************************/
 /* multichoice question pages*/
@@ -366,6 +381,62 @@ background-color: #00cca3;
 }
 
 /********************************/
+/* Large Extract Page*/
+/********************************/
+
+.large-extract-container{
+box-sizing: border-box;
+padding-top: 10vw;
+background: -webkit-linear-gradient(left, #12FFF7, #B3FFAB);
+margin: 0 auto;
+height: 100vh;
+width: 100vw;
+color: dimgrey;
+}
+
+.large-extract{
+  font-family: 'Source Sans Pro', sans-serif;
+  background: white;
+  width: 80vw;
+  height: 75vh;
+  max-width: 1000px;
+  max-height: 500px;
+  border-radius: 20px;
+  margin: 0 auto;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.large-extract h2 {
+  padding-top: 10vw;
+  text-align: center;
+  font-family: 'Lobster Two';
+  font-size: 3em;
+  margin: 0 auto;
+  color: darkslategrey;
+}
+
+.large-extract p {
+  text-align: center;
+  margin: 10vw;
+  font-size: 1em;
+
+}
+
+@media screen and (min-width:1000px){
+  .large-extract p {
+    margin: 5vw 10vw 10vw 10vw;
+    padding-bottom: 10vw;
+    font-size: 1.25em;
+    text-align: center;
+  }
+  .large-extract h2 {
+    padding-top: 5vw;
+  }
+  .large-extract {
+    height: auto;
+  }
+}
+/********************************/
 /* navbar */
 /********************************/
 
@@ -422,6 +493,48 @@ background-color: #00cca3;
   width: 33vw;
 }
 
+/********************************/
+/* Modal for hint button in nav-bar*/
+/********************************/
+.modal-overlay{
+  background-color: lightgrey;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index:1;
+  opacity:.90;
+}
+
+#modal{
+position: absolute;
+text-align: center;
+border-radius: 15px;
+padding-top: 10vw;
+top: 15vh;
+left: 15vw;
+width: 70vw;
+height: 70vh;
+background-color: #fff;
+z-index:2;
+overflow: auto;
+color: darkslategrey;
+}
+
+.close-modal{
+position: absolute;
+right: 1px;
+top: 1px;
+display:block;
+color: #000;
+background:white;
+text-decoration: none;
+font-size: 20px;
+height: 12px;
+padding: 0.5em 1em;
+color:darkslategrey;
+}
 
 /********************************/
 /* header. Simply says 'litlearn' */
@@ -614,42 +727,4 @@ font-size: 6vh;
   background-color: #B373F0;
   border-radius: 50%;
     background-size: contain;
-}
-
-/********************************/
-/* Large Extract Page*/
-/********************************/
-
-.large-extract-container{
-box-sizing: border-box;
-padding-top: 10vw;
-background: -webkit-linear-gradient(left, #12FFF7, #B3FFAB);
-margin: 0 auto;
-height: 100vh;
-width: 100vw;
-}
-
-.large-extract{
-  font-family: 'Source Sans Pro', sans-serif;
-  background: white;
-  width: 80vw;
-  height: 75vh;
-  border-radius: 20px;
-  margin: 0 auto;
-  box-shadow: 2px 2px 2px #888888;
-}
-
-.large-extract h2 {
-  padding-top: 10vw;
-  text-align: center;
-  font-family: 'Lobster Two';
-  font-size: 3em;
-  margin: 0 auto;
-}
-
-.large-extract p {
-  text-align: center;
-  margin: 10vw;
-  font-size: 1em;
-
 }
