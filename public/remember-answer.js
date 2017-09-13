@@ -10,6 +10,6 @@ function remember (ev) {
     console.log ('Could not get answer from event.target:',ev.target);
 }
 
-console.log ('remember.js ran :)');
+console.log ('remember-answer.js ran :)');
 
 document.getElementById ('question-mc').addEventListener  ('submit', remember);
