@@ -1,5 +1,8 @@
 module.exports = [
     'choosequestion',
     'summary',
-    'congratulations'
+    'congratulations',
+    'explain',
+    'extract',
+    'multichoice'
   ]
