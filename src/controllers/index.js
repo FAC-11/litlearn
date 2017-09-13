@@ -19,10 +19,10 @@ const intro = require('./intro');
 router.get('/', home.get);
 // included /:number to allow for random questions
 router.get('/choosequestion', choosequestion.get);
-router.get('/multichoice/:number', multichoice.get);
-router.get('/explain/:number', explain.get);
+router.get('/multichoice/', multichoice.get);
+router.get('/explain/', explain.get);
 router.get('/summary', summary.get);
 router.get('/intro/:number', intro.get);
 router.get('/congratulations', congratulations.get);
-router.get('/extract/:number', extract.get);
+router.get('/extract/', extract.get);
 module.exports = router;
