@@ -2,7 +2,7 @@
   {{>header}}
 </header>
 
-<div id='timer'> test timer (failed if you see this!) </div>
+<div id='timer' style = 'display: none;'> test timer (failed if you see this!) </div>
 
 <div id='question-object-storage-container', style = 'display: none;'
   data-question-object = ''>
@@ -21,10 +21,10 @@
     {{#each data.options}}
       <div class='radio-container-div'>
         <input type='radio'
-          value='{{@index}}' id='option {{@index}}' name='answer'>
-        <label class='radio-label' for='option {{@index}}'>
+          value='{{onePlus @index}}' id='option-{{onePlus @index}}' name='answer'>
+        <label class='radio-label' for='option-{{onePlus @index}}'>
           <span class='radio-unclicked'> </span>
-          <span class='radio-text'> {{this}}</span>       <!-- (is our answer text) -->
+          <span id='option-text-{{onePlus @index}}' class='radio-text'> {{this}}</span>       <!-- (is our answer text) -->
          </label>
         </div>
       {{/each}}

@@ -2,10 +2,19 @@
 
 // ids shoulkd contain everything /potentially/ relevant, as unused items will be filtered out later.
 // {key=sessionStorage name : {html: HTML id}}
-const ids=
+var ids=
   {'summary' : {'html':'summary-content', 'dest' : 'innerHTML'},
   'questioncontent' : {'html':'question-content', 'dest' : 'innerHTML'},
   'options' : {'html':'options-str'},
+  'option-1' : {'html':'option-1', 'dest' : 'value'},
+  'option-twin-1' : {'html':'option-text-1', 'dest' : 'innerHTML'},
+  'option-2' : {'html':'option-2', 'dest' : 'value'},
+  'option-twin-2' : {'html':'option-text-2', 'dest' : 'innerHTML'},
+  'option-3' : {'html':'option-3', 'dest' : 'value'},
+  'option-twin-3' : {'html':'option-text-3', 'dest' : 'innerHTML'},
+  'option-4' : {'html':'option-4', 'dest' : 'value'},
+  'option-twin-4' : {'html':'option-text-4', 'dest' : 'innerHTML'},
+
   'hint' : {'html': 'lightbulb', 'dest' : 'data-hint-content'}, //done
   'extractcontent' : {'html':'extract-content', 'dest' : 'innerHTML'}, //looks good. No extract showing, but seems to be prob with old part
   'trophy' : {'html':'trophy'},
@@ -13,6 +22,31 @@ const ids=
   'oneTaskTimer' : {'html': 'timer'},
   // 'totalTimer' : {'html': 'totalTimer' }
   };
+//
+// var howManyOptions = 4;
+// howManyOptions ++;
+// while (howManyOptions, howManyOptions--, (howManyOptions>0)){
+//   console.log ('loop:',howManyOptions);
+//   console.log ('ids[option-+howManyOptions]:',ids['option-'+howManyOptions]);
+//   console.log ('Object.assign (ids.options,{.....}):',Object.assign (ids.options,{'html':'option-'+howManyOptions, 'dest' : 'value'}));
+//   ids['option-'+howManyOptions] = Object.assign (ids.options,{'html':'option-'+howManyOptions, 'dest' : 'value'});
+//   ids['option-twin-'+howManyOptions] = Object.assign (ids.options,{'html':'option-text-'+howManyOptions, 'dest' : 'value'});
+//   console.log ('>>>',ids['option-'+howManyOptions],ids['option-twin-'+howManyOptions],'<<<');
+// }
+// console.log ('DONE\n\n\n\n\n\n\n\nDONE::',ids);
+//
+// function unpackOptionsStr (containingIdObj) {   //beware the mutable input!
+//   if (containingIdObj.options) {
+// console.log ('ABOUT TO UNPACK: ',containingIdObj.options);
+//     var optionsArr = JSON.parse (containingIdObj.options);
+//     optionsArr.forEach ((option,index) => {
+//       console.log ('OI:',(option,index));
+//       containingIdObj ['option'+index] = Object.assign (containingIdObj.options,{'html':'option-'+index, 'dest' : 'value'});
+//       containingIdObj [+'option-clone'+index] = Object.assign (containingIdObj.options,{'html':'option-text-'+index, 'dest' : 'innerHTML'});
+//     });
+//   }
+//   return containingIdObj;
+// }
 
 // {key=sessionStorage name : {html: HTML id, element: actual HTML element withih document}}
 function locateCurrentElements (idsObj) {

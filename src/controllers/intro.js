@@ -27,7 +27,13 @@ exports.get = (req, res, next) => {
         trophy: queryResult.rows[0].trophy
       }
       queryResult.rows[0].options = JSON.parse(queryResult.rows[0].options);
-      const data = JSON.stringify(queryResult.rows[0]);
+      var optsObj={};
+      queryResult.rows[0].options.forEach ((option,index) => {
+        optsObj['option-'+(index+1)] = option,
+        optsObj['option-twin-'+(index+1)] = option;
+      });
+      optsObj = Object.assign (queryResult.rows[0],optsObj);
+      const data = JSON.stringify(optsObj);
 // console.log (data);
 
       res.render('intro', {
