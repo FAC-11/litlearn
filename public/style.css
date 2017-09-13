@@ -162,6 +162,10 @@ color: white;
   max-width: 600px;
 }
 
+.hidden {
+  display: none;
+}
+
 /********************************/
 /* multichoice question pages*/
 /********************************/

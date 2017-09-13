@@ -3,7 +3,7 @@ const dbConnection = require('./../model/db_connection');
 exports.get = (req, res, next) => {
 
   const sqlQuery = `SELECT questions.summary, questions.id, string_agg(tags.tag, ', ')
- AS filter FROM questions INNER JOIN many2many ON questions.id=many2many.question_id INNER JOIN tags on many2many.tag_id = tags.id GROUP BY questions.summary, questions.id;`;
+ AS filter FROM questions INNER JOIN many2many ON questions.id=many2many.question_id INNER JOIN tags on many2many.tag_id = tags.id GROUP BY questions.id, questions.summary;`;
 
   const showData = () => {
       return new Promise((resolve, reject) => {
