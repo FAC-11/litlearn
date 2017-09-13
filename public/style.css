@@ -145,26 +145,41 @@ color: white;
 }
 
 
-
-.hidden{
-  display: none;
+/* choice of question */
+.question-button-div{
+  text-align: center;
 }
 
-/* choice of question */
-.question-button {
-  border: 1px #43b293 solid;
+.question-choice-button {
   background-color: white;
-  border-radius: 5px;
+  text-decoration: none;
+  border: none;
   color: #43b293;
   display: block;
   text-align: left;
   width: 80%;
   max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: solid 0.25px lightgrey;
+  border-top: solid 0.25px lightgrey;
+  width: 100vw;
+}
+
+.question-summary-text{
+  color: darkslategrey;
+}
+
+.question-tags{
+  color: darkslategrey;
+  letter-spacing: 1px;
 }
 
 .hidden {
   display: none;
 }
+
+
 
 /********************************/
 /* multichoice question pages*/

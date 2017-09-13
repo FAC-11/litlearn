@@ -1,10 +1,12 @@
 {{>header}}
 <div id='question-button-div'>
 {{#each data}}
-<a href='/multichoice/{{this.id}}'>
-  <button class='question-button hidden' id='question-button-{{this.id}}'>
-    <h3>{{this.summary}}</h3>
-    <p>{{this.filter}}</p>
+
+<a href='/intro/{{this.id}}'>
+  <button class='question-choice-button hidden' id='question-button-{{this.id}}'>
+    <h3 class='question-summary-text'>{{this.summary}}</h3>
+    <p class='question-tags'>{{this.filter}}</p>
+
   </button></a>
 {{/each}}
 </div>
@@ -68,10 +70,12 @@
   <label for="frankenstein" class='button-label'> Frankenstein </label>
 </fieldset>
 
+
 <fieldset>
 <input type="reset" value='Reset' class='button-label'>
-<input type="submit" value='Submit' class='button-label'>
+<input type="submit"value='Submit' class='button-label' action="location.href = #question-button-div">
 </fieldset>
-</form>
+
+</form >
 
 <script src='../filter.js'></script>
