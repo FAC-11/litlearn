@@ -15,10 +15,11 @@ var ids=
   'option-4' : {'html':'option-4', 'dest' : 'value'},
   'option-twin-4' : {'html':'option-text-4', 'dest' : 'innerHTML'},
 
-  'hint' : {'html': 'lightbulb', 'dest' : 'data-hint-content'}, //done
-  'extractcontent' : {'html':'extract-content', 'dest' : 'innerHTML'}, //looks good. No extract showing, but seems to be prob with old part
+  'hint' : {'html': 'lightbulb', 'dest' : 'data-hint-content'},
+  'extractcontent' : {'html':'extract-content', 'dest' : 'innerHTML'},
   'trophy' : {'html':'trophy'},
-  'answer' : {'html': 'answer'},
+  'answer' : {'html': 'answer'},  //once answer is being stored, add
+                                  // , 'dest' : 'innerHTML'} to this object
   'oneTaskTimer' : {'html': 'timer'},
   // 'totalTimer' : {'html': 'totalTimer' }
   };
