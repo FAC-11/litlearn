@@ -20,8 +20,8 @@ var ids=
   'trophy' : {'html':'trophy'},
   'answer' : {'html': 'answer'},  //once answer is being stored, add
                                   // , 'dest' : 'innerHTML'} to this object
-  'oneTaskTimer' : {'html': 'timer'},
-  // 'totalTimer' : {'html': 'totalTimer' }
+  // 'oneTaskTimer' : {'html': 'timer', 'dest' : 'innerHTML'},
+  'totalTimer' : {'html': 'total-timer', 'dest' : 'innerHTML' }
   };
 //
 // var howManyOptions = 4;

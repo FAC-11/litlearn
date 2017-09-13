@@ -30,3 +30,5 @@ console.log ('totalTimer ->',totalTimer);
   sessionStorage.setItem("oneTaskTimer", JSON.stringify(oneTaskTimer));
   return timeSpent;
 }
+
+stopTimer();
