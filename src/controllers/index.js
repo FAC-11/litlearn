@@ -7,6 +7,7 @@ router.use(bodyParser.urlencoded({extended: true}));
 
 const home = require('./home');
 const multichoice = require('./multichoice');
+const explain = require('./explain');
 const choosequestion = require('./choosequestion');
 const congratulations = require('./congratulations');
 const summary = require('./summary');
@@ -19,6 +20,7 @@ router.get('/', home.get);
 // included /:number to allow for random questions
 router.get('/choosequestion', choosequestion.get);
 router.get('/multichoice/:number', multichoice.get);
+router.get('/explain/:number', explain.get);
 router.get('/summary', summary.get);
 router.get('/intro/:number', intro.get);
 router.get('/congratulations', congratulations.get);
