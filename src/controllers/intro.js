@@ -21,13 +21,14 @@ exports.get = (req, res, next) => {
   showData()
     .then((queryResult, text) => {
 // console.log ('Got query result:',queryResult);
+// errorcheck here - does the result make sense?
       const question = {
         summary: queryResult.rows[0].summary,
         trophy: queryResult.rows[0].trophy
       }
       queryResult.rows[0].options = JSON.parse(queryResult.rows[0].options);
       const data = JSON.stringify(queryResult.rows[0]);
-console.log (data);
+// console.log (data);
 
       res.render('intro', {
         //activePage for potential future functionality
